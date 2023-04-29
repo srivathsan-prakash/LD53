@@ -23,6 +23,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2720449570526898921, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
+      propertyPath: m_Color.b
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720449570526898921, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
+      propertyPath: m_Color.g
+      value: 0.80578834
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720449570526898921, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
+      propertyPath: m_Color.r
+      value: 0.63529414
+      objectReference: {fileID: 0}
     - target: {fileID: 2720449570526898922, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: axisName
       value: Arrows

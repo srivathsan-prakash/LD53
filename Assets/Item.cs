@@ -1,50 +1,50 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public int wrapVariant = 0;
-    public int sizeVariant = 0;
-    public int ribbonVariant = 0;
+    public Dictionary<CompType, int> Components;
 
-    [SerializeField] private int defaultVariant = -1;
+    private const int defaultVariant = -1;
+
+    private void Awake()
+    {
+        InitializeComponentsDictionary();
+    }
 
     private void OnEnable()
     {
-        Decoration.UpdateItem += UpdateDecor;
+        Events.UpdateItemComponent += UpdateComponent;
     }
 
     private void OnDisable()
     {
-        Decoration.UpdateItem -= UpdateDecor;
+        Events.UpdateItemComponent -= UpdateComponent;
     }
 
-    private void UpdateDecor(Decoration.Type decorType, int variant)
+    private void UpdateComponent(CompType compType, int variant)
     {
-        switch (decorType)
-        {
-            case Decoration.Type.Wrap:
-                if (wrapVariant == variant)
-                    wrapVariant = defaultVariant;
-                else
-                    wrapVariant = variant;
-                break;
-            case Decoration.Type.Box:
-                if (sizeVariant == variant)
-                    sizeVariant = defaultVariant;
-                else
-                    sizeVariant = variant;
-                break;
-            case Decoration.Type.Ribbon:
-                if (ribbonVariant == variant)
-                    ribbonVariant = defaultVariant;
-                else
-                    ribbonVariant = variant;
-                break;
-        }
+        Components[compType] = variant;
 
-        Debug.LogFormat("Current Item - Wrap: {0}, BoxSize: {1}, Ribbon: {2}", wrapVariant, sizeVariant, ribbonVariant);
+        DisplayComponents();
+    }
+
+    private void InitializeComponentsDictionary()
+    {
+        Components = new Dictionary<CompType, int>();
+
+        foreach (CompType type in Enum.GetValues(typeof(CompType)))
+            Components.Add(type, defaultVariant);
+    }
+
+    private void DisplayComponents()
+    {
+        string result = string.Empty;
+
+        foreach (KeyValuePair<CompType, int> component in Components)
+            result += component.Key + " : " + component.Value + " | ";
+
+        Debug.Log(result);
     }
 }

@@ -21,8 +21,11 @@ public class Decoration : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.LogFormat("Space pressed on decoration: {0}, variation: {1}", type, variation);
-            UpdateItem?.Invoke(type, variation);
+            if (collision.tag.Equals("Player"))
+            {
+                Debug.LogFormat("Space pressed on decoration: {0}, variation: {1}", type, variation);
+                UpdateItem?.Invoke(type, variation);
+            }
         }
     }
 }

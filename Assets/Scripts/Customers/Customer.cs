@@ -116,14 +116,14 @@ public class Customer : MonoBehaviour
 	private void OrderFailed() {
 		//Negative points, leave
 		Debug.Log("Order failed!");
-		Events.CustomerLeft.Invoke();
+		Events.CustomerLeft?.Invoke();
 		Destroy(gameObject);
 	}
 
 	private void OrderCorrect() {
 		//Apply points multipliers, leave
 		Debug.Log("Order correct!");
-		Events.CustomerLeft.Invoke();
+		Events.CustomerLeft?.Invoke();
 		Destroy(gameObject);
 	}
 

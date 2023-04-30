@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Dropoff
   - Customer
+  - FireExtinguisher
+  - Component
+  - Fire
+  - Spill
   layers:
   - Default
   - TransparentFX

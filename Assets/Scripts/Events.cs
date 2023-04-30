@@ -1,9 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class Events
 {
     public static Action<CompType, int> UpdateItemComponent;
+    public static Action<string> PlayMusic;
+    public static Action<string> PlaySound;
+    public static Action StopMusic;
 }

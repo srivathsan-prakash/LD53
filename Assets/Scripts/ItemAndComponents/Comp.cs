@@ -2,36 +2,11 @@ using UnityEngine;
 
 public class Comp : MonoBehaviour
 {
-    [SerializeField] private CompType type;
-    [SerializeField] private int variant;
+    public CompType type;
+    public int variant;
 	[SerializeField] private SpriteRenderer rend;
-
-    private bool playerInRange = false;
 
 	private void Start() {
 		rend.sprite = ComponentManager.GetVariantSprite(type, variant);
 	}
-
-	private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-            playerInRange = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-            playerInRange = false;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (playerInRange)
-            {
-                Events.UpdateItemComponent?.Invoke(type, variant);
-            }
-        }
-    }
 }

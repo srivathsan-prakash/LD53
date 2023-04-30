@@ -61,6 +61,7 @@ MonoBehaviour:
       gravity: 3
       sensitivity: 3
       snap: 0
+    interactionKey: 304
   - axisName: Arrows
     horizontal:
       positiveKey: 275
@@ -74,6 +75,7 @@ MonoBehaviour:
       gravity: 3
       sensitivity: 3
       snap: 0
+    interactionKey: 303
   standardGravity: 3
   standardSensitivity: 3
   slipperyGravity: 0.25
@@ -106,6 +108,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ebb8b167fbf62459950fc456b73ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  variants: []
+  customerPrefab: {fileID: 0}
+  customerParent: {fileID: 0}
+  lines: []
+  lineSpacing: 0
+  maxPerLine: 0
+  spawnInterval: 0
 --- !u!114 &1302922266865955305
 MonoBehaviour:
   m_ObjectHideFlags: 0

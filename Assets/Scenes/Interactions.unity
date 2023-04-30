@@ -622,7 +622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5537166025504591498, guid: 623870b9f10a3bc43bed176b4ed416c4, type: 3}
       propertyPath: spawnInterval
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5537166025504591498, guid: 623870b9f10a3bc43bed176b4ed416c4, type: 3}
       propertyPath: customerParent
@@ -654,11 +654,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5537166025504591498, guid: 623870b9f10a3bc43bed176b4ed416c4, type: 3}
       propertyPath: lines.Array.data[0].maxCustomers
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5537166025504591498, guid: 623870b9f10a3bc43bed176b4ed416c4, type: 3}
       propertyPath: lines.Array.data[1].maxCustomers
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 623870b9f10a3bc43bed176b4ed416c4, type: 3}

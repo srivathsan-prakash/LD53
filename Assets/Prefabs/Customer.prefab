@@ -601,8 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45d54c7f0a1f714e8e616d74383ac28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moodIndicator: {fileID: 7484396846091878822}
-  patienceSlider: {fileID: 7484396847486485721}
+  itemHolder: {fileID: 7484396846871373193}
   itemImgs:
   - type: 0
     img: {fileID: 7484396847567876176}
@@ -610,8 +609,20 @@ MonoBehaviour:
     img: {fileID: 7484396847598293994}
   - type: 2
     img: {fileID: 7484396846808545670}
+  moodIndicator: {fileID: 7484396846091878822}
+  patienceSlider: {fileID: 7484396847486485721}
+  sliderFill: {fileID: 7484396846034776095}
+  happyImg: {fileID: 21300000, guid: a6fbd5a181bc51e42a61a73fe8d727c8, type: 3}
+  happyColor: {r: 0, g: 1, b: 0, a: 1}
+  mehImg: {fileID: 21300000, guid: 4d7e6e570e9d65a4c9a994783a0652e2, type: 3}
+  mehThreshold: 0.66
+  mehColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  angryImg: {fileID: 21300000, guid: a3ced8f7044b9de4787602a9e9b20ea7, type: 3}
+  angryThreshold: 0.33
+  angryColor: {r: 1, g: 0, b: 0, a: 1}
   maxPatience: 100
-  patienceDecay: 1
+  patienceDecayFront: 3
+  patienceDecayBehind: 0.5
 --- !u!1 &7484396847486485723
 GameObject:
   m_ObjectHideFlags: 0

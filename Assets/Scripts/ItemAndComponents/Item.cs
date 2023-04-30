@@ -37,7 +37,7 @@ public class Item : MonoBehaviour
         Events.UpdateItemComponent -= UpdateComponent;
     }
 
-    private void UpdateComponent(CompType compType, int variant) {
+    public void UpdateComponent(CompType compType, int variant) {
         Components[compType] = variant;
 
         DisplayComponents();

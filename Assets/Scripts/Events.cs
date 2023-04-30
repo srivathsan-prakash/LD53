@@ -6,4 +6,5 @@ using UnityEngine;
 public class Events
 {
     public static Action<CompType, int> UpdateItemComponent;
+	public static Action CustomerLeft;
 }

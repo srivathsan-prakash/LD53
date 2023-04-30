@@ -47,6 +47,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightPlayer Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2758354694280655600, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
+      propertyPath: interactionKey
+      value: 303
+      objectReference: {fileID: 0}
     - target: {fileID: 3587813721434949011, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.889

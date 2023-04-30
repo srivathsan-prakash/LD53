@@ -16,14 +16,22 @@ public class CustomerLine
 		if(LineLength < maxCustomers) {
 			line.Enqueue(c);
 			c.transform.position = head.position + Vector3.right * spacing * (LineLength - 1);
+			if(LineLength == 1) {
+				c.SetAsFront();
+			}
 		}
 	}
 	public void RemoveCustomer() {
-		line.Dequeue();
-		int i = 0;
-		foreach(Customer c in line) {
-			c.transform.position = head.position + Vector3.right * spacing * i;
-			i++;
+		if(line.Peek() == null) {
+			line.Dequeue();
+			int i = 0;
+			foreach(Customer c in line) {
+				c.transform.position = head.position + Vector3.right * spacing * i;
+				i++;
+			}
+			if(line.Count > 0) {
+				line.Peek().SetAsFront();
+			}
 		}
 	}
 	public int LineLength { get { return line.Count; } }
@@ -43,6 +51,14 @@ public class CustomerManager : MonoBehaviour
 		InvokeRepeating(nameof(SpawnNewCustomer), 1, spawnInterval);
 	}
 
+	private void OnEnable() {
+		Events.CustomerLeft += CustomerLeft;
+	}
+
+	private void OnDisable() {
+		Events.CustomerLeft -= CustomerLeft;
+	}
+
 	private void SpawnNewCustomer() {
 		IEnumerable<CustomerLine> openLines = lines.Where(x => x.LineLength < x.maxCustomers);
 		if(openLines.Count() > 0) {
@@ -55,8 +71,14 @@ public class CustomerManager : MonoBehaviour
 		}
 	}
 
-	//When spawning a new customer, check for the first open line and add it there
-	//Line will need to be informed when a customer leaves for any reason
-	//and then call dequeue - maybe we fire a CustomerLeft event and check Peek for null?
-	//If customers in the middle of the line can leave, we won't be able to use a queue at all
+	private void CustomerLeft() {
+		StartCoroutine(DoCustomerLeft());
+	}
+
+	private IEnumerator DoCustomerLeft() {
+		yield return null;
+		foreach(CustomerLine l in lines) {
+			l.RemoveCustomer();
+		}
+	}
 }

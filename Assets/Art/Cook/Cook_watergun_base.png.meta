@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,9 +113,1377 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Cook_watergun_base_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 246
+        width: 18
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74884e2a7fce314b882e6efece231bf
+      internalID: -1513260504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 246
+        width: 16
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35addade1811575498e9c77589d32f92
+      internalID: 1311298771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 246
+        width: 23
+        height: 28
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91b898604d8d404b9e3f821edd070ec
+      internalID: 863741238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_3
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 246
+        width: 27
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9d33948bf3dbc43b98fcc442e9883f
+      internalID: -1403802208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_4
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 265
+        width: 9
+        height: 11
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffdcd30f1943e04b992984475f57b9c
+      internalID: -958249323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_5
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 267
+        width: 5
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e37a607e76cafa459a85f64ef555553
+      internalID: -1942277805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_6
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 267
+        width: 5
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261037222abef49478a43ef11e91b025
+      internalID: -776748654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_7
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 267
+        width: 5
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a863169367be174a8ff47c38b5dabf9
+      internalID: 593014782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_8
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 265
+        width: 9
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e948f6781becf074f9523bcf074a93f7
+      internalID: 379649332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_9
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 266
+        width: 18
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bc3057e57f3a3438a28f2fa2638171
+      internalID: -2036729632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_10
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 267
+        width: 5
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031340c6a656a6443b7568b1622256f2
+      internalID: -183554101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_11
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 267
+        width: 5
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687e29982bf83ba4ba4ffdf4adebbd38
+      internalID: -1891571231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_12
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 267
+        width: 17
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ea06ea6fe7c934baf8395fcf06e80e
+      internalID: 1337305166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_13
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 266
+        width: 4
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013819fda9ccab54eb67bf6c7ff327e2
+      internalID: 1986546875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_14
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 267
+        width: 14
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ad65ac33c3f3d4a997cb61eadbd297
+      internalID: 5397551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_15
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 267
+        width: 16
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48c57ec5d104df4d99849589729025b
+      internalID: 996410106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_16
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 182
+        width: 25
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860efc5c97806a84f830286ca852024e
+      internalID: -1715097024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_17
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 182
+        width: 25
+        height: 28
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e82bd7cba9ab334ab3e4c0beea9d959
+      internalID: 1294223479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_18
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 182
+        width: 25
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6713554cb585df44fafebe102eaad1a5
+      internalID: 1252732692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_19
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 182
+        width: 25
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7335bfd604860d642b0ccc0aa0fe3a22
+      internalID: -738416365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_20
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 182
+        width: 25
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883239d3f2f91f0428808dd61b09a31d
+      internalID: 392247412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_21
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 182
+        width: 25
+        height: 28
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1d5be8d87079b40af27fb3f15bf413
+      internalID: 391991563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_22
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 182
+        width: 25
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea989e63a10e8634180146628bcfde48
+      internalID: -980764671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_23
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 182
+        width: 25
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a027b76028e9a774b8e0ae87c562fe9b
+      internalID: 1264406227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_24
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 199
+        width: 16
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d70f0822bbad049960641ac6bdb884
+      internalID: -322925884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_25
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 199
+        width: 10
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1cab42a45dbdde46b0a508d74bd9fa5
+      internalID: 145956898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_26
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 200
+        width: 18
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead68449cda519a46836701ea2961716
+      internalID: -469727458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_27
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 200
+        width: 8
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afe58ca1a07db04982e198d1823c715
+      internalID: 222985566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_28
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 200
+        width: 5
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1fc2a123c5d5f48bc35d1be31d81c5
+      internalID: -542160616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_29
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 198
+        width: 5
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d45e8c319fa77b4ab6a86158adcd976
+      internalID: 1960280768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_30
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 118
+        width: 25
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e0d2232ea6b43429d8f896543607b7
+      internalID: 1191691070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_31
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 118
+        width: 35
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1265d50352f03ae4f8b9a308e6621896
+      internalID: 2031680853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_32
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 118
+        width: 25
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6435d81f154d1124dbe410969c9c04ab
+      internalID: -546896545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_33
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 118
+        width: 34
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5857c605141d648a7d7b0a8bde99ea
+      internalID: 814886055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_34
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 118
+        width: 25
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7c7e74bb995e448bf43984323065e4
+      internalID: 823767985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_35
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 118
+        width: 35
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a03c83412d4f5a498a6e1f4ce07e01e
+      internalID: -739955022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_36
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 118
+        width: 25
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558db350226a6d74da39320cd47f2a9c
+      internalID: -416284545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_37
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 118
+        width: 34
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8892237c2b5e9c45862a86f9c0658f1
+      internalID: -433270745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_38
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 130
+        width: 9
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f66a2648123c9043a4d5cb731f71f57
+      internalID: 1088170547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_39
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 131
+        width: 10
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec426ca9f099c849bebff5561902500
+      internalID: 1516981518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_40
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 131
+        width: 5
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6285ea5273b5a2e479b1c5d526e5ba7c
+      internalID: -1749311608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_41
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 131
+        width: 5
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad1588421681484296e709495a8bf4b
+      internalID: 1359303156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_42
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 131
+        width: 5
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7661f31ceac5bed41b9ca334fb61e6f6
+      internalID: -1602538721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_43
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 131
+        width: 5
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8438089b3c2a14e8ca4cb69bc71239
+      internalID: -1731347803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_44
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 130
+        width: 14
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d13efc28bf93b3409ca48a6147232bb
+      internalID: 989961325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_45
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 131
+        width: 18
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf001998cbf2b0041afd6c4ae293d639
+      internalID: 1785145971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_46
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 131
+        width: 8
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a30a583a0c1314ebb3b4a66f6b71e7
+      internalID: -1664731215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_47
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 131
+        width: 5
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e55df321d6f8d47881da5bd1cc2aa6
+      internalID: 831957728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_48
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 129
+        width: 5
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bcba1f349ce9744fa6edfc10c8f11e4
+      internalID: -6364490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_49
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 54
+        width: 25
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06380e00a8088d44c831a6c90c9d3cb7
+      internalID: 680736982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_50
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 54
+        width: 25
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c67e325c2aeaf4da276b20978c4fa6
+      internalID: 1360245224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_51
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 54
+        width: 24
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f52db0727a157459509ba5545b2a01
+      internalID: -388479499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_52
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 54
+        width: 24
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1fb2ef6974e25c40b848362c2a35d7c
+      internalID: 1240058204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_53
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 53
+        width: 25
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355248e6e84d3db4dae22c4a80874c17
+      internalID: -810399456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_54
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 53
+        width: 24
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfde9514c67f76a4a82508d8011d37d3
+      internalID: 1940495087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_55
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 54
+        width: 24
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e034659499b82d43a64a5e70fa8203c
+      internalID: 1421722731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_56
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 53
+        width: 25
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a07fa4608ebf9498fb22ded169a6b3
+      internalID: -781463112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_57
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 69
+        width: 11
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70f158a5adcfb443a9e485bffd9453b
+      internalID: -433884799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_58
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 70
+        width: 8
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f147aa0df9abbfb498caf71adc8febd7
+      internalID: 582186716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_59
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 69
+        width: 9
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9c9e038a54331409a45ce041083bc9
+      internalID: -151484780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_60
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 70
+        width: 18
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a81c01c60a316949a1bb53e70f5b3da
+      internalID: -1536457161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_61
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 70
+        width: 8
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88ae6b74b1d0514a9ba7c3bfce36546
+      internalID: 728835023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_62
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 70
+        width: 5
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 502aa5e23c112d84a87c976755c1aa24
+      internalID: 1076739845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cook_watergun_base_63
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 68
+        width: 5
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca9fbc42c056014fb631f548e630827
+      internalID: -1948602789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +1494,71 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cook_watergun_base_11: -1891571231
+      Cook_watergun_base_25: 145956898
+      Cook_watergun_base_42: -1602538721
+      Cook_watergun_base_20: 392247412
+      Cook_watergun_base_54: 1940495087
+      Cook_watergun_base_39: 1516981518
+      Cook_watergun_base_16: -1715097024
+      Cook_watergun_base_1: 1311298771
+      Cook_watergun_base_4: -958249323
+      Cook_watergun_base_56: -781463112
+      Cook_watergun_base_28: -542160616
+      Cook_watergun_base_13: 1986546875
+      Cook_watergun_base_14: 5397551
+      Cook_watergun_base_50: 1360245224
+      Cook_watergun_base_48: -6364490
+      Cook_watergun_base_26: -469727458
+      Cook_watergun_base_61: 728835023
+      Cook_watergun_base_63: -1948602789
+      Cook_watergun_base_49: 680736982
+      Cook_watergun_base_17: 1294223479
+      Cook_watergun_base_40: -1749311608
+      Cook_watergun_base_30: 1191691070
+      Cook_watergun_base_21: 391991563
+      Cook_watergun_base_55: 1421722731
+      Cook_watergun_base_46: -1664731215
+      Cook_watergun_base_38: 1088170547
+      Cook_watergun_base_36: -416284545
+      Cook_watergun_base_47: 831957728
+      Cook_watergun_base_31: 2031680853
+      Cook_watergun_base_5: -1942277805
+      Cook_watergun_base_57: -433884799
+      Cook_watergun_base_37: -433270745
+      Cook_watergun_base_59: -151484780
+      Cook_watergun_base_6: -776748654
+      Cook_watergun_base_62: 1076739845
+      Cook_watergun_base_12: 1337305166
+      Cook_watergun_base_23: 1264406227
+      Cook_watergun_base_35: -739955022
+      Cook_watergun_base_2: 863741238
+      Cook_watergun_base_8: 379649332
+      Cook_watergun_base_53: -810399456
+      Cook_watergun_base_3: -1403802208
+      Cook_watergun_base_7: 593014782
+      Cook_watergun_base_27: 222985566
+      Cook_watergun_base_44: 989961325
+      Cook_watergun_base_22: -980764671
+      Cook_watergun_base_15: 996410106
+      Cook_watergun_base_45: 1785145971
+      Cook_watergun_base_41: 1359303156
+      Cook_watergun_base_18: 1252732692
+      Cook_watergun_base_10: -183554101
+      Cook_watergun_base_9: -2036729632
+      Cook_watergun_base_60: -1536457161
+      Cook_watergun_base_24: -322925884
+      Cook_watergun_base_0: -1513260504
+      Cook_watergun_base_29: 1960280768
+      Cook_watergun_base_33: 814886055
+      Cook_watergun_base_19: -738416365
+      Cook_watergun_base_34: 823767985
+      Cook_watergun_base_32: -546896545
+      Cook_watergun_base_52: 1240058204
+      Cook_watergun_base_58: 582186716
+      Cook_watergun_base_51: -388479499
+      Cook_watergun_base_43: -1731347803
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

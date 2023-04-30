@@ -45,8 +45,8 @@ GameObject:
   - component: {fileID: 2720449570526898921}
   - component: {fileID: 2720449570526898922}
   - component: {fileID: 672236312096178595}
-  - component: {fileID: 7037839777860685499}
   - component: {fileID: 2758354694280655600}
+  - component: {fileID: 9152713931736552382}
   m_Layer: 0
   m_Name: LeftPlayer
   m_TagString: Player
@@ -137,6 +137,7 @@ MonoBehaviour:
   axisName: WASD
   speed: 4.5
   slipperySpeed: 6
+  animator: {fileID: 0}
 --- !u!50 &672236312096178595
 Rigidbody2D:
   serializedVersion: 4
@@ -158,22 +159,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &7037839777860685499
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2720449570526898923}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &2758354694280655600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +172,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 6750712760554241108}
+--- !u!95 &9152713931736552382
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2720449570526898923}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f1321aae09a0ca4ea441976c99fb352, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8766844109955710726
 GameObject:
   m_ObjectHideFlags: 0

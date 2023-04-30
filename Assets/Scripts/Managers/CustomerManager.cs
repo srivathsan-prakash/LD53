@@ -43,8 +43,6 @@ public class CustomerManager : MonoBehaviour
 	public Customer customerPrefab;
 	public Transform customerParent;
 	public CustomerLine[] lines;
-	public float lineSpacing;
-	public int maxPerLine;
 	public float spawnInterval;
 
 	private void Start() {

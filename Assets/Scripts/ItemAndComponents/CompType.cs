@@ -1,7 +1,9 @@
 
 public enum CompType
 {
-    Wrap,
-    Box,
-    Ribbon
+    Meat,
+    Fish,
+    Dessert,
+	Veg,
+	Plate
 }

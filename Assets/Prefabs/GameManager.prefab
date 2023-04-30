@@ -61,7 +61,6 @@ MonoBehaviour:
       gravity: 3
       sensitivity: 3
       snap: 0
-    interactionKey: 304
   - axisName: Arrows
     horizontal:
       positiveKey: 275
@@ -75,7 +74,6 @@ MonoBehaviour:
       gravity: 3
       sensitivity: 3
       snap: 0
-    interactionKey: 303
   standardGravity: 3
   standardSensitivity: 3
   slipperyGravity: 0.25
@@ -96,6 +94,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e19d0f13035a93a4b85929fabfc81e43, type: 2}
   - {fileID: 11400000, guid: 5d5f3d15e88b8d04db0591933cc6b521, type: 2}
   - {fileID: 11400000, guid: a13dbae92d6568d43a60ace64b133557, type: 2}
+  - {fileID: 11400000, guid: 5d77618667c04e645baae8fe10298785, type: 2}
+  - {fileID: 11400000, guid: 4d951cd128d253a4287c1247305a1e5f, type: 2}
 --- !u!114 &5537166025504591498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,12 +109,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variants: []
-  customerPrefab: {fileID: 0}
+  customerPrefab: {fileID: 7484396846945248149, guid: abdb7e84b39d86c42bf8ac2728286f6a, type: 3}
   customerParent: {fileID: 0}
   lines: []
-  lineSpacing: 0
-  maxPerLine: 0
-  spawnInterval: 0
+  spawnInterval: 10
 --- !u!114 &1302922266865955305
 MonoBehaviour:
   m_ObjectHideFlags: 0

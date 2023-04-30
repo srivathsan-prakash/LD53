@@ -4,26 +4,31 @@ public class Comp : MonoBehaviour
 {
     [SerializeField] private CompType type;
     [SerializeField] private int variant;
+	[SerializeField] private SpriteRenderer rend;
 
-    private bool isActive = false;
+    private bool playerInRange = false;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+	private void Start() {
+		rend.sprite = ComponentManager.GetVariantSprite(type, variant);
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
-            isActive = true;
+            playerInRange = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
-            isActive = false;
+            playerInRange = false;
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (isActive)
+            if (playerInRange)
             {
                 Debug.LogFormat("Space pressed near component: {0}, variant: {1}", type, variant);
                 Events.UpdateItemComponent?.Invoke(type, variant);

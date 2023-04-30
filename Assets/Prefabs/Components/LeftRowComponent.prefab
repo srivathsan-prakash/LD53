@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2194392868581424152
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2371815244599840451, guid: ad089c49a3be9bb42949f34f55ce1a10, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371815244599840573, guid: ad089c49a3be9bb42949f34f55ce1a10, type: 3}
+      propertyPath: m_Size.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371815244599840573, guid: ad089c49a3be9bb42949f34f55ce1a10, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371815244599840573, guid: ad089c49a3be9bb42949f34f55ce1a10, type: 3}
+      propertyPath: m_Offset.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371815244599840573, guid: ad089c49a3be9bb42949f34f55ce1a10, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371815244599840573, guid: ad089c49a3be9bb42949f34f55ce1a10, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371815244599840574, guid: ad089c49a3be9bb42949f34f55ce1a10, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371815244599840574, guid: ad089c49a3be9bb42949f34f55ce1a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371815244599840574, guid: ad089c49a3be9bb42949f34f55ce1a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371815244599840574, guid: ad089c49a3be9bb42949f34f55ce1a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371815244599840575, guid: ad089c49a3be9bb42949f34f55ce1a10, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 2371815244599840575, guid: ad089c49a3be9bb42949f34f55ce1a10, type: 3}
+      propertyPath: m_Name
+      value: LeftRowComponent
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad089c49a3be9bb42949f34f55ce1a10, type: 3}

@@ -56,13 +56,6 @@ public class Item : MonoBehaviour
 				cRend.SetSprite(ComponentManager.GetVariantSprite(cRend.type, Components.GetValueOrDefault(cRend.type)));
 			}
 		}
-
-        string result = string.Empty;
-
-        foreach (KeyValuePair<CompType, int> component in Components)
-            result += component.Key + " : " + component.Value + " | ";
-
-        Debug.Log(result);
     }
 
 	public void Clear() {

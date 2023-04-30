@@ -24,6 +24,12 @@ public class ComponentManager : MonoBehaviour
 		}
 	}
 
+	public static int ComponentNumber(CompType type) {
+		ComponentVariants v = instance.GetVariants(type);
+		if(v != null) { return v.variants.Length; } 
+		else { return 0; }
+	}
+
 	private ComponentVariants GetVariants(CompType type) {
 		return componentVariants.FirstOrDefault(x => x.type == type);
 	}

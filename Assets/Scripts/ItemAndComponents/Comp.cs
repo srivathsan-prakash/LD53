@@ -30,7 +30,6 @@ public class Comp : MonoBehaviour
         {
             if (playerInRange)
             {
-                Debug.LogFormat("Space pressed near component: {0}, variant: {1}", type, variant);
                 Events.UpdateItemComponent?.Invoke(type, variant);
             }
         }

@@ -35,14 +35,14 @@ public class InputAxis
 		}
 	}
 
-	public void PosKeyDown() {
+	public void PositiveKeyDown() {
 		if(key == KeyDown.Negative && snap) {
 			value = NEUTRAL;
 		}
 		key = KeyDown.Positive;
 	}
 
-	public void NegKeyDown() {
+	public void NegativeKeyDown() {
 		if(key == KeyDown.Positive && snap) {
 			value = NEUTRAL;
 		}
@@ -76,15 +76,15 @@ public class InputAxis
 		value = Mathf.Clamp(value, MINIMUM, MAXIMUM);
 	}
 
-	public void PosKeyUp() {
+	public void PositiveKeyUp(bool negKeyHeld) {
 		if(key == KeyDown.Positive) {
-			key = KeyDown.Neither;
+			key = negKeyHeld ? KeyDown.Negative : KeyDown.Neither;
 		}
 	}
 
-	public void NegKeyUp() {
+	public void NegativeKeyUp(bool posKeyHeld) {
 		if (key == KeyDown.Negative) {
-			key = KeyDown.Neither;
+			key = posKeyHeld ? KeyDown.Positive : KeyDown.Neither;
 		}
 	}
 }
@@ -172,16 +172,16 @@ public class InputManager : MonoBehaviour
 
 	private void CheckKeys(InputAxis axis) {
 		if(Input.GetKeyDown(axis.NegativeKey)) {
-			axis.NegKeyDown();
+			axis.NegativeKeyDown();
 		}
 		if(Input.GetKeyDown(axis.PositiveKey)) {
-			axis.PosKeyDown();
+			axis.PositiveKeyDown();
 		}
 		if(Input.GetKeyUp(axis.NegativeKey)) {
-			axis.NegKeyUp();
+			axis.NegativeKeyUp(Input.GetKey(axis.PositiveKey));
 		}
 		if(Input.GetKeyUp(axis.PositiveKey)) {
-			axis.PosKeyUp();
+			axis.PositiveKeyUp(Input.GetKey(axis.NegativeKey));
 		}
 	}
 }

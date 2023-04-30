@@ -137,6 +137,7 @@ MonoBehaviour:
   axisName: WASD
   speed: 4.5
   slipperySpeed: 6
+  rb: {fileID: 672236312096178595}
 --- !u!50 &672236312096178595
 Rigidbody2D:
   serializedVersion: 4

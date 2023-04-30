@@ -7,11 +7,12 @@ public class PlayerMovement : MonoBehaviour
 	public string axisName;
 	public float speed;
 	public float slipperySpeed;
+	[SerializeField] private Rigidbody2D rb = null;
 
 	private bool isSlippery = false;
 
-	private void Update() {
-		transform.position += GetInputValues(true) * (isSlippery ? slipperySpeed : speed) * Time.deltaTime;
+	private void FixedUpdate() {
+		rb.velocity = GetInputValues(true) * (isSlippery ? slipperySpeed : speed);
 	}
 
 	private Vector3 GetInputValues(bool raw) {

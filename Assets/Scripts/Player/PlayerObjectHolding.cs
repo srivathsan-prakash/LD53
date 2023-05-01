@@ -18,6 +18,7 @@ public class PlayerObjectHolding : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.CompareTag("Component")) {
 			component = collision.GetComponent<Comp>();
+			Debug.Log($"{name} in range for {(component != null ? component.name : "NULL")}");
 		} else if (collision.CompareTag("Dropoff")) {
 			dropoffItem = collision.GetComponentInChildren<Item>();
 		} else if (collision.CompareTag("Customer")) {
@@ -33,7 +34,10 @@ public class PlayerObjectHolding : MonoBehaviour
 
 	private void OnTriggerExit2D(Collider2D collision) {
 		if(collision.CompareTag("Component")) {
-			component = null;
+			Comp c = collision.GetComponent<Comp>();
+			if (component != null && component.Equals(c)) {
+				component = null;
+			}
 		} else if (collision.CompareTag("Dropoff")) {
 			dropoffItem = null;
 		} else if (collision.CompareTag("Customer")) {
@@ -41,9 +45,15 @@ public class PlayerObjectHolding : MonoBehaviour
 		} else if (collision.CompareTag("FireExtinguisher")) {
 			extinguisher = null;
 		} else if (collision.CompareTag("Fire")) {
-			fire = null;
+			GameObject f = collision.gameObject;
+			if(fire != null && fire.Equals(f)) {
+				fire = null;
+			}
 		} else if (collision.CompareTag("Spill")) {
-			spill = null;
+			Spill s = collision.GetComponent<Spill>();
+			if(spill != null && spill.Equals(s)) {
+				spill = null;
+			}
 		}
 	}
 	
@@ -51,18 +61,23 @@ public class PlayerObjectHolding : MonoBehaviour
 		if(Input.GetKeyDown(interactionKey)) {
 			if (component != null && !hasExtinguisher) {
 				item.UpdateComponent(component.type, component.variant);
+			}  else if (extinguisher != null) {
+				if(!hasExtinguisher) {
+					item.Clear();
+				}
+				extinguisher.enabled = !extinguisher.enabled;
+				hasExtinguisher = !hasExtinguisher;
+			} else if (fire != null && hasExtinguisher) {
+				Events.FireExtinguished?.Invoke();
+				Destroy(fire);
+			} else if (spill != null) {
+				item.Clear();
+				spill.IncrementLicks();
 			} else if (customer != null) {
 				if (!item.IsEmpty()) {
 					customer.GiveItem(item.Components);
 					item.Clear();
 				}
-			} else if (extinguisher != null) {
-				extinguisher.enabled = !extinguisher.enabled;
-				hasExtinguisher = !hasExtinguisher;
-			} else if (fire != null && hasExtinguisher) {
-				Destroy(fire);
-			} else if (spill != null) {
-				spill.IncrementLicks();
 			} else if (dropoffItem != null) { //if we're in both triggers, favor the customer
 				if (item.IsEmpty() && !dropoffItem.IsEmpty()) {
 					item.SetValues(dropoffItem.Components);

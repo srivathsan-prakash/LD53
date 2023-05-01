@@ -37,15 +37,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2720449570526898920, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.48
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2720449570526898920, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.48
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2720449570526898920, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.48
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2720449570526898920, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -77,15 +77,15 @@ PrefabInstance:
       objectReference: {fileID: -877627556, guid: afaae5193be8895478280b2cd4c0a42f, type: 3}
     - target: {fileID: 2720449570526898921, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_Color.b
-      value: 0.94509804
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2720449570526898921, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_Color.g
-      value: 0.80578834
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2720449570526898921, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_Color.r
-      value: 0.63529414
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2720449570526898922, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: animator
@@ -109,10 +109,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3587813721434949011, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.889
+      value: 0.576
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587813721434949011, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.243
       objectReference: {fileID: 0}
     - target: {fileID: 6750712760554241108, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: listenToChanges
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882280147409719002, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9152713931736552382, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}

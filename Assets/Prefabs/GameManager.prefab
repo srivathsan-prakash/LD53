@@ -108,11 +108,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ebb8b167fbf62459950fc456b73ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  variants: []
+  variants:
+  - {fileID: 21300000, guid: 508e1d3123bde7f45b74885cad92fe52, type: 3}
   customerPrefab: {fileID: 7484396846945248149, guid: abdb7e84b39d86c42bf8ac2728286f6a, type: 3}
   customerParent: {fileID: 0}
   lines: []
-  spawnInterval: 10
+  startPause: 1.5
+  spawnInterval: {x: 7, y: 11}
 --- !u!114 &1302922266865955305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,3 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0380275327baf704ba6643623ec351cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fire: {fileID: 6686517885335506560, guid: 57089249a6d51ae4381474bc4d3a2505, type: 3}
+  fireSpawns: []
+  fireSpawnInterval: {x: 15, y: 30}
+  spill: {fileID: 6477684443704901893, guid: 0afd98ddbe7ee7948b00ee6376c038f1, type: 3}
+  spillSpawns: []
+  spillSpawnInterval: {x: 13, y: 28}

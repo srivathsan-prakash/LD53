@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 	public float slipperySpeed;
 	public Animator animator;
 	public SpriteRenderer sprite;
+	[SerializeField] private Rigidbody2D rb = null;
 
 	private bool isSlippery = false;
 
@@ -23,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
 		if (isAnimatorWalking != isPlayerWalking)
 			animator.SetBool("isWalking", isPlayerWalking);
 
+	private void FixedUpdate() {
+		rb.velocity = GetInputValues(true) * (isSlippery ? slipperySpeed : speed);
 	}
 
 	private Vector3 GetInputValues(bool raw) {

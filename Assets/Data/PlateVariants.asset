@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f7417336474cd0448d166e53d97ae22, type: 3}
-  m_Name: WrapVariants
+  m_Name: PlateVariants
   m_EditorClassIdentifier: 
-  type: 0
+  type: 4
   variants:
-  - {fileID: 21300000, guid: 92b204cca46037444ab18ba6701f86f7, type: 3}
-  - {fileID: 21300000, guid: 626b9cddb29049e4cac50cd87b419945, type: 3}
-  - {fileID: 21300000, guid: 2cfbf6619eb047545a425e8a31732c83, type: 3}
+  - {fileID: 21300000, guid: 2e0cf451cb3d56742aad87ea75993209, type: 3}
+  - {fileID: 21300000, guid: 25096ce515c063c48a2bd6b108c95912, type: 3}
+  - {fileID: 21300000, guid: 5d52b20f865aff242bfcb08c3b6f61a5, type: 3}

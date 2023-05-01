@@ -4,32 +4,73 @@ using UnityEngine;
 
 public class PlayerObjectHolding : MonoBehaviour
 {
+	public KeyCode interactionKey;
 	public Item item;
 
+	private Comp component;
 	private Item dropoffItem;
+	private Customer customer;
+	private SpriteRenderer extinguisher;
+	private bool hasExtinguisher = false;
+	private GameObject fire;
+	private Spill spill;
 
 	private void OnTriggerEnter2D(Collider2D collision) {
-		if(collision.CompareTag("Dropoff")) {
+		if (collision.CompareTag("Component")) {
+			component = collision.GetComponent<Comp>();
+		} else if (collision.CompareTag("Dropoff")) {
 			dropoffItem = collision.GetComponentInChildren<Item>();
-			Debug.Log($"{name} in the dropoff zone; Dropoff item {(dropoffItem == null ? "NULL" : dropoffItem.name)}");
+		} else if (collision.CompareTag("Customer")) {
+			customer = collision.GetComponent<Customer>();
+		} else if (collision.CompareTag("FireExtinguisher")) {
+			extinguisher = collision.GetComponent<SpriteRenderer>();
+		} else if (collision.CompareTag("Fire")) {
+			fire = collision.gameObject;
+		} else if (collision.CompareTag("Spill")) {
+			spill = collision.GetComponent<Spill>();
 		}
 	}
 
 	private void OnTriggerExit2D(Collider2D collision) {
-		if(collision.CompareTag("Dropoff")) {
+		if(collision.CompareTag("Component")) {
+			component = null;
+		} else if (collision.CompareTag("Dropoff")) {
 			dropoffItem = null;
+		} else if (collision.CompareTag("Customer")) {
+			customer = null;
+		} else if (collision.CompareTag("FireExtinguisher")) {
+			extinguisher = null;
+		} else if (collision.CompareTag("Fire")) {
+			fire = null;
+		} else if (collision.CompareTag("Spill")) {
+			spill = null;
 		}
 	}
-
+	
 	private void Update() {
-		if(Input.GetKeyDown(KeyCode.Space) && dropoffItem != null) {
-			Debug.Log($"{name} item is empty {item.IsEmpty()}, dropoff item is empty {dropoffItem.IsEmpty()}");
-			if(item.IsEmpty() && !dropoffItem.IsEmpty()) {
-				item.SetValues(dropoffItem.Components);
-				dropoffItem.Clear();
-			} else if (!item.IsEmpty() && dropoffItem.IsEmpty()) {
-				dropoffItem.SetValues(item.Components);
-				item.Clear();
+		if(Input.GetKeyDown(interactionKey)) {
+			if (component != null && !hasExtinguisher) {
+				item.UpdateComponent(component.type, component.variant);
+			} else if (customer != null) {
+				if (!item.IsEmpty()) {
+					customer.GiveItem(item.Components);
+					item.Clear();
+				}
+			} else if (extinguisher != null) {
+				extinguisher.enabled = !extinguisher.enabled;
+				hasExtinguisher = !hasExtinguisher;
+			} else if (fire != null && hasExtinguisher) {
+				Destroy(fire);
+			} else if (spill != null) {
+				spill.IncrementLicks();
+			} else if (dropoffItem != null) { //if we're in both triggers, favor the customer
+				if (item.IsEmpty() && !dropoffItem.IsEmpty()) {
+					item.SetValues(dropoffItem.Components);
+					dropoffItem.Clear();
+				} else if (!item.IsEmpty() && dropoffItem.IsEmpty()) {
+					dropoffItem.SetValues(item.Components);
+					item.Clear();
+				}
 			}
 		}
 	}

@@ -5,7 +5,20 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class Spill : MonoBehaviour
 {
+	public int requiredLicks = 3;
+
 	private List<PlayerMovement> touchingPlayers = new List<PlayerMovement>();
+	private int currentLicks = 0;
+
+	public void IncrementLicks() {
+		currentLicks++;
+		if(currentLicks >= requiredLicks) {
+			foreach(PlayerMovement p in touchingPlayers) {
+				p.MakeSlippery(false);
+			}
+			Destroy(gameObject);
+		}
+	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
 		PlayerMovement player = collision.GetComponent<PlayerMovement>();

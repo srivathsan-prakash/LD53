@@ -18,7 +18,6 @@ public class PlayerObjectHolding : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.CompareTag("Component")) {
 			component = collision.GetComponent<Comp>();
-			Debug.Log($"{name} in range for {(component != null ? component.name : "NULL")}");
 		} else if (collision.CompareTag("Dropoff")) {
 			dropoffItem = collision.GetComponentInChildren<Item>();
 		} else if (collision.CompareTag("Customer")) {

@@ -34,10 +34,12 @@ public class Customer : MonoBehaviour
 	public Sprite angryImg;
 	[Range(0, 1)] public float angryThreshold;
 	public Color angryColor = Color.red;
-
 	public float maxPatience;
 	public float patienceDecayFront;
 	public float patienceDecayBehind;
+
+	[Header("Misc")]
+	[SerializeField] private SpriteRenderer rend = null;
 	
 	private Dictionary<CompType, int> order = new Dictionary<CompType, int>();
 	private float currentPatience;
@@ -50,6 +52,10 @@ public class Customer : MonoBehaviour
 		currentPatience = maxPatience;
 		UpdateSliderVisual();
 		currentPatienceDecay = patienceDecayBehind;
+	}
+
+	public void SetSprite(Sprite s) {
+		rend.sprite = s;
 	}
 
 	private void RandomizeOrder() {

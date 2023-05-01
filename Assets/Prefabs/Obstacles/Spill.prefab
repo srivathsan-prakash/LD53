@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6477684443704901893}
   m_Layer: 0
   m_Name: Spill
-  m_TagString: Untagged
+  m_TagString: Spill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

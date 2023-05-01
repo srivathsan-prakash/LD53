@@ -18,6 +18,7 @@ public class PlayerObjectHolding : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.CompareTag("Component")) {
 			component = collision.GetComponent<Comp>();
+			Debug.Log($"{name} in range for {(component != null ? component.name : "NULL")}");
 		} else if (collision.CompareTag("Dropoff")) {
 			dropoffItem = collision.GetComponentInChildren<Item>();
 		} else if (collision.CompareTag("Customer")) {
@@ -33,7 +34,10 @@ public class PlayerObjectHolding : MonoBehaviour
 
 	private void OnTriggerExit2D(Collider2D collision) {
 		if(collision.CompareTag("Component")) {
-			component = null;
+			Comp c = collision.GetComponent<Comp>();
+			if (component != null && component.Equals(c)) {
+				component = null;
+			}
 		} else if (collision.CompareTag("Dropoff")) {
 			dropoffItem = null;
 		} else if (collision.CompareTag("Customer")) {
@@ -41,14 +45,27 @@ public class PlayerObjectHolding : MonoBehaviour
 		} else if (collision.CompareTag("FireExtinguisher")) {
 			extinguisher = null;
 		} else if (collision.CompareTag("Fire")) {
-			fire = null;
+			GameObject f = collision.gameObject;
+			if(fire != null && fire.Equals(f)) {
+				fire = null;
+			}
 		} else if (collision.CompareTag("Spill")) {
-			spill = null;
+			Spill s = collision.GetComponent<Spill>();
+			if(spill != null && spill.Equals(s)) {
+				spill = null;
+			}
 		}
 	}
 	
 	private void Update() {
 		if(Input.GetKeyDown(interactionKey)) {
+			Debug.Log($"{name}: component {(component == null ? "NULL" : component.name)}" +
+				$" | hasExtinguisher {hasExtinguisher}" +
+				$" | customer {(customer == null ? "NULL" : customer.name)}" +
+				$" | extinguisher {(extinguisher == null ? "NULL" : extinguisher.name)}" +
+				$" | fire {(fire == null ? "NULL" : fire.name)}" +
+				$" | spill {(spill == null ? "NULL" : spill.name)}" +
+				$" | dropoffItem {(dropoffItem == null ? "NULL" : dropoffItem.name)}");
 			if (component != null && !hasExtinguisher) {
 				item.UpdateComponent(component.type, component.variant);
 			} else if (customer != null) {
@@ -57,11 +74,16 @@ public class PlayerObjectHolding : MonoBehaviour
 					item.Clear();
 				}
 			} else if (extinguisher != null) {
+				if(!hasExtinguisher) {
+					item.Clear();
+				}
 				extinguisher.enabled = !extinguisher.enabled;
 				hasExtinguisher = !hasExtinguisher;
 			} else if (fire != null && hasExtinguisher) {
+				Events.FireExtinguished?.Invoke();
 				Destroy(fire);
 			} else if (spill != null) {
+				item.Clear();
 				spill.IncrementLicks();
 			} else if (dropoffItem != null) { //if we're in both triggers, favor the customer
 				if (item.IsEmpty() && !dropoffItem.IsEmpty()) {

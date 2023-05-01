@@ -16,6 +16,7 @@ public class Spill : MonoBehaviour
 			foreach(PlayerMovement p in touchingPlayers) {
 				p.MakeSlippery(false);
 			}
+			Events.SpillCleaned?.Invoke();
 			Destroy(gameObject);
 		}
 	}

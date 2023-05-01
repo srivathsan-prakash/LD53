@@ -564,6 +564,7 @@ MonoBehaviour:
   maxPatience: 100
   patienceDecayFront: 3
   patienceDecayBehind: 0.5
+  rend: {fileID: 2563459855243784763}
 --- !u!1 &7484396847486485723
 GameObject:
   m_ObjectHideFlags: 0

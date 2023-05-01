@@ -43,33 +43,57 @@ public class CustomerManager : MonoBehaviour
 	public Customer customerPrefab;
 	public Transform customerParent;
 	public CustomerLine[] lines;
-	public float spawnInterval;
+	public float startPause = 1.5f;
+	public Vector2 spawnInterval;
+
+	private bool isPlaying;
+	private int maxCustomers = 0;
+	private int currentCustomers = 0;
 
 	private void Start() {
-		InvokeRepeating(nameof(SpawnNewCustomer), 1, spawnInterval);
+		foreach(CustomerLine line in lines) {
+			maxCustomers += line.maxCustomers;
+		}
+		StartCoroutine(StartSpawnCustomers());
 	}
 
 	private void OnEnable() {
 		Events.CustomerLeft += CustomerLeft;
+		isPlaying = true;
 	}
 
 	private void OnDisable() {
 		Events.CustomerLeft -= CustomerLeft;
+		isPlaying = false;
 	}
 
-	private void SpawnNewCustomer() {
-		IEnumerable<CustomerLine> openLines = lines.Where(x => x.LineLength < x.maxCustomers);
-		if(openLines.Count() > 0) {
-			//Randomly pick from the shortest lines
-			openLines = openLines.OrderBy(x => x.LineLength);
-			int customers = openLines.ElementAt(0).LineLength;
-			openLines = openLines.Where(x => x.LineLength == customers);
-			int i = Random.Range(0, openLines.Count());
-			openLines.ElementAt(i).AddCustomer(Instantiate(customerPrefab, customerParent));
+	private IEnumerator StartSpawnCustomers() {
+		yield return new WaitForSeconds(startPause);
+		StartCoroutine(DoSpawnCustomer());
+	}
+
+	private IEnumerator DoSpawnCustomer() {
+		while(isPlaying && currentCustomers < maxCustomers) {
+			IEnumerable<CustomerLine> openLines = lines.Where(x => x.LineLength < x.maxCustomers);
+			if(openLines.Count() > 0) {
+				//Randomly pick from the shortest lines
+				openLines = openLines.OrderBy(x => x.LineLength);
+				int customers = openLines.ElementAt(0).LineLength;
+				openLines = openLines.Where(x => x.LineLength == customers);
+				int i = Random.Range(0, openLines.Count());
+				Customer c = Instantiate(customerPrefab, customerParent);
+				c.SetSprite(variants[Random.Range(0, variants.Length)]);
+				openLines.ElementAt(i).AddCustomer(c);
+				currentCustomers++;
+			}
+			if(currentCustomers < maxCustomers) {
+				yield return new WaitForSeconds(Random.Range(spawnInterval.x, spawnInterval.y));
+			}
 		}
 	}
 
 	private void CustomerLeft() {
+		currentCustomers--;
 		StartCoroutine(DoCustomerLeft());
 	}
 
@@ -77,6 +101,10 @@ public class CustomerManager : MonoBehaviour
 		yield return null;
 		foreach(CustomerLine l in lines) {
 			l.RemoveCustomer();
+		}
+		if(currentCustomers == maxCustomers - 1) {
+			yield return new WaitForSeconds(Random.Range(spawnInterval.x, spawnInterval.y));
+			StartCoroutine(DoSpawnCustomer());
 		}
 	}
 }

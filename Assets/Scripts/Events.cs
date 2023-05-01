@@ -9,5 +9,6 @@ public class Events
     public static Action StopMusic;
 
 	public static Action CustomerLeft;
-
+	public static Action SpillCleaned;
+	public static Action FireExtinguished;
 }

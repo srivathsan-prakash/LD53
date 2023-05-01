@@ -5522,6 +5522,10 @@ MonoBehaviour:
     img: {fileID: 5983880561746928111}
   - type: 1
     img: {fileID: 7382053793073309195}
+  happyScore: 50
+  mehScore: 35
+  angryScore: 20
+  failScore: -10
   moodIndicator: {fileID: 7484396846091878822}
   patienceSlider: {fileID: 7484396847486485721}
   sliderFill: {fileID: 7484396846034776095}

@@ -43,12 +43,18 @@ public class EventsManager : MonoBehaviour
 		isPlaying = true;
 		Events.FireExtinguished += FireExtinguished;
 		Events.SpillCleaned += SpillCleaned;
+		Events.EndGame += EndGame;
 		fireRoutine = StartCoroutine(DoStartSpawn(fire));
 		spillRoutine = StartCoroutine(DoStartSpawn(spill));
 	}
 
 	private void OnDisable() {
+		EndGame();
+	}
+
+	private void EndGame() {
 		isPlaying = false;
+		Events.EndGame -= EndGame;
 		Events.FireExtinguished -= FireExtinguished;
 		Events.SpillCleaned -= SpillCleaned;
 		if(fireRoutine != null) {

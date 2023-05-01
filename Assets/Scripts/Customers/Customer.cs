@@ -22,6 +22,12 @@ public class Customer : MonoBehaviour
 	public GameObject itemHolder;
 	public ComponentImage[] itemImgs;
 
+	[Header("Score")]
+	public int happyScore = 50;
+	public int mehScore = 35;
+	public int angryScore = 20;
+	public int failScore = -10;
+
 	[Header("Patience")]
 	public Image moodIndicator;
 	public Slider patienceSlider;
@@ -47,6 +53,7 @@ public class Customer : MonoBehaviour
 	private float currentPatience;
 	private float currentPatienceDecay;
 	private bool isFront = false;
+	private bool doDecay = true;
 
 	private void Start() {
 		RandomizeOrder();
@@ -97,12 +104,14 @@ public class Customer : MonoBehaviour
 	}
 
 	private void Update() {
-		currentPatience -= currentPatienceDecay * Time.deltaTime;
-		currentPatience = Math.Max(currentPatience, 0);
-		if(currentPatience <= 0) {
-			StartCoroutine(Leave(false));
+		if(doDecay) {
+			currentPatience -= currentPatienceDecay * Time.deltaTime;
+			currentPatience = Math.Max(currentPatience, 0);
+			if(currentPatience <= 0) {
+				StartCoroutine(Leave(false));
+			}
+			UpdateSliderVisual();
 		}
-		UpdateSliderVisual();
 	}
 
 	public void GiveItem(Dictionary<CompType, int> item) {
@@ -124,13 +133,30 @@ public class Customer : MonoBehaviour
 	}
 
 	private IEnumerator Leave(bool success) {
+		doDecay = false;
 		itemHolder.SetActive(false);
 		patienceSlider.gameObject.SetActive(false);
 		moodIndicator.gameObject.SetActive(false);
 		rend.enabled = false;
 
 		(success ? successParticles : failParticles).Play();
-		yield return new WaitForSeconds((success ? successParticles : failParticles).main.duration);
+		float seconds = (success ? successParticles : failParticles).main.duration;
+		yield return new WaitForSeconds(seconds / 2.0f);
+		int score = 0;
+		if(success) {
+			if(currentPatience > maxPatience * mehThreshold) {
+				score = happyScore;
+			} else if (currentPatience > maxPatience * angryThreshold) {
+				score = mehScore;
+			} else {
+				score = angryScore;
+			}
+		} else {
+			score = failScore;
+		}
+		Events.AddScore?.Invoke(score);
+		yield return new WaitForSeconds(seconds / 2.0f);
+
 		Events.CustomerLeft?.Invoke();
 		Destroy(gameObject);
 	}

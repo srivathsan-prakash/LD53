@@ -51,6 +51,7 @@ public class CustomerManager : MonoBehaviour
 	private bool isPlaying;
 	private int maxCustomers = 0;
 	private int currentCustomers = 0;
+	private Coroutine customerRoutine;
 
 	private void Start() {
 		foreach(CustomerLine line in lines) {
@@ -61,17 +62,26 @@ public class CustomerManager : MonoBehaviour
 
 	private void OnEnable() {
 		Events.CustomerLeft += CustomerLeft;
+		Events.EndGame += EndGame;
 		isPlaying = true;
 	}
 
 	private void OnDisable() {
+		EndGame();
+	}
+
+	private void EndGame() {
 		Events.CustomerLeft -= CustomerLeft;
+		Events.EndGame -= EndGame;
 		isPlaying = false;
+		if(customerRoutine != null) {
+			StopCoroutine(customerRoutine);
+		}
 	}
 
 	private IEnumerator StartSpawnCustomers() {
 		yield return new WaitForSeconds(startPause);
-		StartCoroutine(DoSpawnCustomer());
+		customerRoutine = StartCoroutine(DoSpawnCustomer());
 	}
 
 	private IEnumerator DoSpawnCustomer() {
@@ -106,7 +116,7 @@ public class CustomerManager : MonoBehaviour
 		}
 		if(currentCustomers == maxCustomers - 1) {
 			yield return new WaitForSeconds(Random.Range(spawnInterval.x, spawnInterval.y));
-			StartCoroutine(DoSpawnCustomer());
+			customerRoutine = StartCoroutine(DoSpawnCustomer());
 		}
 	}
 }

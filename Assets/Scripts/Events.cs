@@ -11,4 +11,7 @@ public class Events
 	public static Action CustomerLeft;
 	public static Action SpillCleaned;
 	public static Action FireExtinguished;
+
+	public static Action EndGame;
+	public static Action<int> AddScore;
 }

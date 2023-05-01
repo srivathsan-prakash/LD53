@@ -6,7 +6,8 @@ public class PlayerObjectHolding : MonoBehaviour
 {
 	public KeyCode interactionKey;
 	public Item item;
-	[SerializeField] private Animator anim;
+	public GameObject plate;
+	public Animator anim;
 
 	private Comp component;
 	private Item dropoffItem;
@@ -108,11 +109,13 @@ public class PlayerObjectHolding : MonoBehaviour
 		{
 			anim.SetLayerWeight(regLayerIndex, 0);
 			anim.SetLayerWeight(gunLayerIndex, 1);
+			plate.gameObject.SetActive(false);
 		}
 		else
 		{
 			anim.SetLayerWeight(gunLayerIndex, 0);
 			anim.SetLayerWeight(regLayerIndex, 1);
+			plate.gameObject.SetActive(true);
 		}
 	}
 }

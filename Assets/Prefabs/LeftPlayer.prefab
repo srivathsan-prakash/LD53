@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 672236312096178595}
   - component: {fileID: 2758354694280655600}
   - component: {fileID: 9152713931736552382}
-  - component: {fileID: 1782293725}
+  - component: {fileID: 2412140716773931863}
   m_Layer: 0
   m_Name: LeftPlayer
   m_TagString: Player
@@ -196,8 +196,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &1782293725
-BoxCollider2D:
+--- !u!70 &2412140716773931863
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -210,18 +210,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6333333, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.17, y: 0.29}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.46340078, y: 1}
+  m_Direction: 0
 --- !u!1 &8766844109955710726
 GameObject:
   m_ObjectHideFlags: 0

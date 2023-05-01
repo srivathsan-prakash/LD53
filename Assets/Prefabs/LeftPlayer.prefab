@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 672236312096178595}
   - component: {fileID: 2758354694280655600}
   - component: {fileID: 9152713931736552382}
+  - component: {fileID: 1782293725}
   m_Layer: 0
   m_Name: LeftPlayer
   m_TagString: Player
@@ -63,8 +64,8 @@ Transform:
   m_GameObject: {fileID: 2720449570526898923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3.28, y: 3.28, z: 3.28}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3587813721434949011}
   m_Father: {fileID: 0}
@@ -111,8 +112,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.9433962, g: 0.6363475, b: 0.6363475, a: 1}
+  m_Sprite: {fileID: -1949083805, guid: 4a59cbc4251fdeb4b97ee8bca36679bd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -137,7 +138,8 @@ MonoBehaviour:
   axisName: WASD
   speed: 4.5
   slipperySpeed: 6
-  animator: {fileID: 0}
+  animator: {fileID: 9152713931736552382}
+  sprite: {fileID: 2720449570526898921}
 --- !u!50 &672236312096178595
 Rigidbody2D:
   serializedVersion: 4
@@ -182,7 +184,7 @@ Animator:
   m_GameObject: {fileID: 2720449570526898923}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9f1321aae09a0ca4ea441976c99fb352, type: 2}
+  m_Controller: {fileID: 9100000, guid: dd155a4fe54704147b5a9fbda60fd55b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -192,6 +194,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &1782293725
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2720449570526898923}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.19, y: 0.3}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.17, y: 0.29}
+  m_EdgeRadius: 0
 --- !u!1 &8766844109955710726
 GameObject:
   m_ObjectHideFlags: 0

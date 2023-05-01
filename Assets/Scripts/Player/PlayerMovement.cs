@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,14 +6,23 @@ public class PlayerMovement : MonoBehaviour
 	public float speed;
 	public float slipperySpeed;
 	public Animator animator;
+	public SpriteRenderer sprite;
 
 	private bool isSlippery = false;
-	private bool isWalking = false;
-	private bool hasGun = false;
 
 	private void Update() {
-		transform.position += GetInputValues(true) * (isSlippery ? slipperySpeed : speed) * Time.deltaTime;
+		// Get variables
+		Vector3 distance = (isSlippery ? slipperySpeed : speed) * Time.deltaTime * GetInputValues(true);
+		bool isAnimatorWalking = animator.GetBool("isWalking");
+		bool isPlayerWalking = distance != Vector3.zero;
 		
+		// Set Movement and Animation states
+		transform.position += distance;
+		sprite.flipX = distance.x < 0;
+
+		if (isAnimatorWalking != isPlayerWalking)
+			animator.SetBool("isWalking", isPlayerWalking);
+
 	}
 
 	private Vector3 GetInputValues(bool raw) {

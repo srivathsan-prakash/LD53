@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionKey: 304
   item: {fileID: 6750712760554241108}
+  anim: {fileID: 9152713931736552382}
 --- !u!95 &9152713931736552382
 Animator:
   serializedVersion: 4

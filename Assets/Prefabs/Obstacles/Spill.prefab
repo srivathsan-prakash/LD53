@@ -136,4 +136,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c47659f4c579a841b3583111a026253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredLicks: 3
+  requiredLicks: 1

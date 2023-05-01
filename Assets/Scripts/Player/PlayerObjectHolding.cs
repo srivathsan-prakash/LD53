@@ -6,6 +6,7 @@ public class PlayerObjectHolding : MonoBehaviour
 {
 	public KeyCode interactionKey;
 	public Item item;
+	[SerializeField] private Animator anim;
 
 	private Comp component;
 	private Item dropoffItem;
@@ -58,32 +59,40 @@ public class PlayerObjectHolding : MonoBehaviour
 	
 	private void Update() {
 		if(Input.GetKeyDown(interactionKey)) {
-			if (component != null && !hasExtinguisher) {
+			if (spill != null) {
+				item.Clear();
+				spill.IncrementLicks();
+				anim.SetTrigger("Lick");
+			} else if (component != null && !hasExtinguisher) {
 				item.UpdateComponent(component.type, component.variant);
+				anim.SetTrigger("Pickup");
 			}  else if (extinguisher != null) {
 				if(!hasExtinguisher) {
 					item.Clear();
 				}
 				extinguisher.enabled = !extinguisher.enabled;
 				hasExtinguisher = !hasExtinguisher;
+				//Get/put down the gun here
+				anim.SetTrigger("Pickup");
 			} else if (fire != null && hasExtinguisher) {
 				Events.FireExtinguished?.Invoke();
 				Destroy(fire);
-			} else if (spill != null) {
-				item.Clear();
-				spill.IncrementLicks();
+				//Use the gun here
 			} else if (customer != null) {
 				if (!item.IsEmpty()) {
 					customer.GiveItem(item.Components);
 					item.Clear();
 				}
-			} else if (dropoffItem != null) { //if we're in both triggers, favor the customer
+				anim.SetTrigger("Pickup");
+			} else if (dropoffItem != null) {
 				if (item.IsEmpty() && !dropoffItem.IsEmpty()) {
 					item.SetValues(dropoffItem.Components);
 					dropoffItem.Clear();
+					anim.SetTrigger("Pickup");
 				} else if (!item.IsEmpty() && dropoffItem.IsEmpty()) {
 					dropoffItem.SetValues(item.Components);
 					item.Clear();
+					anim.SetTrigger("Pickup");
 				}
 			}
 		}

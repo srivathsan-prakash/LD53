@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 8405270526943086401}
   - component: {fileID: 5537166025504591498}
   - component: {fileID: 1302922266865955305}
+  - component: {fileID: 7494368819577073431}
+  - component: {fileID: 3413436789309905634}
+  - component: {fileID: 6315996606922445034}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -77,7 +80,7 @@ MonoBehaviour:
   standardGravity: 3
   standardSensitivity: 3
   slipperyGravity: 0.25
-  slipperySensitivity: 0.75
+  slipperySensitivity: 2
 --- !u!114 &8405270526943086401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,6 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variants:
   - {fileID: 21300000, guid: 508e1d3123bde7f45b74885cad92fe52, type: 3}
+  - {fileID: 21300000, guid: d7ed200576c08cb40b0f3f08f46d46fe, type: 3}
+  - {fileID: 21300000, guid: 5902d3e2f30605a418af1a786e83b828, type: 3}
   customerPrefab: {fileID: 7484396846945248149, guid: abdb7e84b39d86c42bf8ac2728286f6a, type: 3}
   customerParent: {fileID: 0}
   lines: []
@@ -127,9 +132,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0380275327baf704ba6643623ec351cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire: {fileID: 6686517885335506560, guid: 57089249a6d51ae4381474bc4d3a2505, type: 3}
-  fireSpawns: []
-  fireSpawnInterval: {x: 15, y: 30}
-  spill: {fileID: 6477684443704901893, guid: 0afd98ddbe7ee7948b00ee6376c038f1, type: 3}
-  spillSpawns: []
-  spillSpawnInterval: {x: 13, y: 28}
+  obstacleParent: {fileID: 0}
+  fire:
+    obstacle: {fileID: 6686517885335506560, guid: 57089249a6d51ae4381474bc4d3a2505, type: 3}
+    spawnLocations:
+    - location: {fileID: 0}
+      spawned: {fileID: 0}
+    - location: {fileID: 0}
+      spawned: {fileID: 0}
+    - location: {fileID: 0}
+      spawned: {fileID: 0}
+    - location: {fileID: 0}
+      spawned: {fileID: 0}
+    - location: {fileID: 0}
+      spawned: {fileID: 0}
+    - location: {fileID: 0}
+      spawned: {fileID: 0}
+    spawnInterval: {x: 16, y: 32}
+    maxSpawned: 4
+    currentSpawned: 0
+  spill:
+    obstacle: {fileID: 6477684443704901892, guid: 0afd98ddbe7ee7948b00ee6376c038f1, type: 3}
+    spawnLocations:
+    - location: {fileID: 0}
+      spawned: {fileID: 0}
+    - location: {fileID: 0}
+      spawned: {fileID: 0}
+    - location: {fileID: 0}
+      spawned: {fileID: 0}
+    - location: {fileID: 0}
+      spawned: {fileID: 0}
+    - location: {fileID: 0}
+      spawned: {fileID: 0}
+    - location: {fileID: 0}
+      spawned: {fileID: 0}
+    spawnInterval: {x: 14, y: 28}
+    maxSpawned: 4
+    currentSpawned: 0
+--- !u!114 &7494368819577073431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4140766099153627133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0726f276a5bab498b55f1e0dcf2644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 0}
+  endGamePopup: {fileID: 0}
+  endScoreText: {fileID: 0}
+  maxSeconds: 300
+  fastMusicThreshold: 60
+--- !u!114 &3413436789309905634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4140766099153627133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300e2b9767e2e77479b9d6f8af5e4b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+--- !u!114 &6315996606922445034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4140766099153627133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02bb8b170966f479894c4129b8608e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

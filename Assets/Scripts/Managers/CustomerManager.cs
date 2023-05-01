@@ -22,15 +22,17 @@ public class CustomerLine
 		}
 	}
 	public void RemoveCustomer() {
-		if(line.Peek() == null) {
-			line.Dequeue();
-			int i = 0;
-			foreach(Customer c in line) {
-				c.transform.position = head.position + Vector3.right * spacing * i;
-				i++;
-			}
-			if(line.Count > 0) {
-				line.Peek().SetAsFront();
+		if(LineLength > 0) {
+			if(line.Peek() == null) {
+				line.Dequeue();
+				int i = 0;
+				foreach(Customer c in line) {
+					c.transform.position = head.position + Vector3.right * spacing * i;
+					i++;
+				}
+				if(line.Count > 0) {
+					line.Peek().SetAsFront();
+				}
 			}
 		}
 	}

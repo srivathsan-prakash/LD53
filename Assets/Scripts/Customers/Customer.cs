@@ -40,6 +40,8 @@ public class Customer : MonoBehaviour
 
 	[Header("Misc")]
 	[SerializeField] private SpriteRenderer rend = null;
+	public ParticleSystem successParticles;
+	public ParticleSystem failParticles;
 	
 	private Dictionary<CompType, int> order = new Dictionary<CompType, int>();
 	private float currentPatience;
@@ -61,7 +63,6 @@ public class Customer : MonoBehaviour
 	private void RandomizeOrder() {
 		foreach (CompType type in Enum.GetValues(typeof(CompType))) {
 			int variant = UnityEngine.Random.Range(0, ComponentManager.ComponentNumber(type));
-			Debug.Log($"Adding {type} {variant} to customer order");
 			order.Add(type, variant);
 		}
 		if(isFront) {
@@ -76,7 +77,6 @@ public class Customer : MonoBehaviour
 		foreach (ComponentImage cImg in itemImgs) {
 			if (order.ContainsKey(cImg.type)) {
 				Sprite s = ComponentManager.GetVariantSprite(cImg.type, order.GetValueOrDefault(cImg.type));
-				Debug.Log($"Setting {cImg.img.name} to {cImg.type} {order.GetValueOrDefault(cImg.type)}: {s.name}");
 				cImg.SetSprite(s);
 			}
 		}
@@ -100,45 +100,38 @@ public class Customer : MonoBehaviour
 		currentPatience -= currentPatienceDecay * Time.deltaTime;
 		currentPatience = Math.Max(currentPatience, 0);
 		if(currentPatience <= 0) {
-			OrderFailed();
+			StartCoroutine(Leave(false));
 		}
 		UpdateSliderVisual();
 	}
 
 	public void GiveItem(Dictionary<CompType, int> item) {
 		//Check if the item is exactly correct
+		bool success = false;
 		if(item.Count == order.Count) {
-			bool success = true;
+			success = true;
 			foreach(CompType type in Enum.GetValues(typeof(CompType))) {
 				success = success && item[type] == order[type];
 			}
-			if(success) {
-				OrderCorrect();
-			} else {
-				OrderFailed();
-			}
-		} else {
-			OrderFailed();
 		}
-	}
-
-	private void OrderFailed() {
-		//Negative points, leave
-		Debug.Log("Order failed!");
-		Events.CustomerLeft?.Invoke();
-		Destroy(gameObject);
-	}
-
-	private void OrderCorrect() {
-		//Apply points multipliers, leave
-		Debug.Log("Order correct!");
-		Events.CustomerLeft?.Invoke();
-		Destroy(gameObject);
+		StartCoroutine(Leave(success));
 	}
 
 	public void SetAsFront() {
 		isFront = true;
 		currentPatienceDecay = patienceDecayFront;
 		ShowItem();
+	}
+
+	private IEnumerator Leave(bool success) {
+		itemHolder.SetActive(false);
+		patienceSlider.gameObject.SetActive(false);
+		moodIndicator.gameObject.SetActive(false);
+		rend.enabled = false;
+
+		(success ? successParticles : failParticles).Play();
+		yield return new WaitForSeconds((success ? successParticles : failParticles).main.duration);
+		Events.CustomerLeft?.Invoke();
+		Destroy(gameObject);
 	}
 }

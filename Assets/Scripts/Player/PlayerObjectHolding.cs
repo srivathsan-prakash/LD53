@@ -59,21 +59,9 @@ public class PlayerObjectHolding : MonoBehaviour
 	
 	private void Update() {
 		if(Input.GetKeyDown(interactionKey)) {
-			Debug.Log($"{name}: component {(component == null ? "NULL" : component.name)}" +
-				$" | hasExtinguisher {hasExtinguisher}" +
-				$" | customer {(customer == null ? "NULL" : customer.name)}" +
-				$" | extinguisher {(extinguisher == null ? "NULL" : extinguisher.name)}" +
-				$" | fire {(fire == null ? "NULL" : fire.name)}" +
-				$" | spill {(spill == null ? "NULL" : spill.name)}" +
-				$" | dropoffItem {(dropoffItem == null ? "NULL" : dropoffItem.name)}");
 			if (component != null && !hasExtinguisher) {
 				item.UpdateComponent(component.type, component.variant);
-			} else if (customer != null) {
-				if (!item.IsEmpty()) {
-					customer.GiveItem(item.Components);
-					item.Clear();
-				}
-			} else if (extinguisher != null) {
+			}  else if (extinguisher != null) {
 				if(!hasExtinguisher) {
 					item.Clear();
 				}
@@ -85,6 +73,11 @@ public class PlayerObjectHolding : MonoBehaviour
 			} else if (spill != null) {
 				item.Clear();
 				spill.IncrementLicks();
+			} else if (customer != null) {
+				if (!item.IsEmpty()) {
+					customer.GiveItem(item.Components);
+					item.Clear();
+				}
 			} else if (dropoffItem != null) { //if we're in both triggers, favor the customer
 				if (item.IsEmpty() && !dropoffItem.IsEmpty()) {
 					item.SetValues(dropoffItem.Components);

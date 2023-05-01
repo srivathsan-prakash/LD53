@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 	public float slipperySpeed;
 	public Animator animator;
 	public SpriteRenderer sprite;
+	public Transform itemHolder;
 	[SerializeField] private Rigidbody2D rb = null;
 
 	private bool isSlippery = false;
@@ -19,7 +20,14 @@ public class PlayerMovement : MonoBehaviour
 		bool isPlayerWalking = distance != Vector3.zero;
 
 		// Set Movement and Animation states
-		sprite.flipX = distance.x < 0;
+		if(isPlayerWalking && distance.x != 0 && sprite.flipX != distance.x < 0) {
+			sprite.flipX = distance.x < 0;
+		}
+		if(itemHolder != null) {
+			if((itemHolder.localPosition.x > 0 && sprite.flipX) || (itemHolder.localPosition.x < 0 && !sprite.flipX)) {
+				itemHolder.localPosition = new Vector3(-itemHolder.localPosition.x, itemHolder.localPosition.y, 0);
+			}
+		}
 
 		if (isAnimatorWalking != isPlayerWalking)
 			animator.SetBool("isWalking", isPlayerWalking);

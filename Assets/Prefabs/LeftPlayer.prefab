@@ -64,7 +64,7 @@ Transform:
   m_GameObject: {fileID: 2720449570526898923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.28, y: 3.28, z: 3.28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3587813721434949011}
@@ -213,7 +213,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.19, y: 0.3}
+    oldSize: {x: 0.6333333, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -313,6 +313,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3587813721434949011}
     m_Modifications:
+    - target: {fileID: 151515957846382135, guid: 5d739449ebe74924194a40192fbce358, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 891148233483507799, guid: 5d739449ebe74924194a40192fbce358, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -370,6 +374,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6017528306189873808, guid: 5d739449ebe74924194a40192fbce358, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507929491306061293, guid: 5d739449ebe74924194a40192fbce358, type: 3}
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}

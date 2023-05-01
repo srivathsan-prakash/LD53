@@ -956,12 +956,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: af6009bf50fb65d41abb21aac253ec2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d549ff2f52f1a54bbd3bdf6caba12d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 12.8, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -985,21 +985,28 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 12.8, y: 7.2}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 12.8, y: 7.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -5.74, y: 2.79}
-      - {x: -2.35, y: 2.78}
-      - {x: -2.35, y: 3.32}
-      - {x: -6.3999996, y: 3.32}
-      - {x: -6.3999996, y: -3.1299999}
-      - {x: -2.35, y: -3.1299999}
-      - {x: -2.35, y: -2.77}
-      - {x: -5.74, y: -2.76}
+    - - {x: -5.74, y: -2.6699998}
+      - {x: -5.73, y: -2.03}
+      - {x: -5.68, y: 2.4199998}
+      - {x: -4.3399997, y: 2.4099998}
+      - {x: -2.34, y: 2.4099998}
+      - {x: -2.34, y: 3.32}
+      - {x: -2.36, y: 3.33}
+      - {x: -6.3999996, y: 3.33}
+      - {x: -6.3999996, y: -3.1399999}
+      - {x: -5.7999997, y: -3.1499999}
+      - {x: -4.0299997, y: -3.1499999}
+      - {x: -2.3799999, y: -3.1399999}
+      - {x: -2.35, y: -3.11}
+      - {x: -2.35, y: -2.71}
+      - {x: -2.37, y: -2.69}
 --- !u!1001 &749325097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1143,7 +1150,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9bd1e9a01295bf048b20eb5944c170ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12c0e57bae5afae42b0497ca01ceb7fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1452,7 +1459,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 92d479bdc3bcb544f8126c46501e5e02, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86e2df3d448254b44a98b1c27fec1ef7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1596,7 +1603,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a8ae1d5a07e0b7f4d9c2f285109c70df, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cdcd0f296bbc8fc45a082c528db9d67d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2079,7 +2086,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9bd1e9a01295bf048b20eb5944c170ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12c0e57bae5afae42b0497ca01ceb7fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2237,12 +2244,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -5
-  m_Sprite: {fileID: 21300000, guid: 9f69deee9e74fdc4598ee500a473c305, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e2a8bade93e318d498fef76e994b34c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 12.8, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2527,7 +2534,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1b589c9c982db344ab29638e9621b0b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b240b426e22817442a88e737835fad2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2750,7 +2757,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: db63a263810e44d4a861fa2c32033ad2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81fb6ad3f1ebb664897aec7f4ab8b80d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

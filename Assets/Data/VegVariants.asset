@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: VegVariants
   m_EditorClassIdentifier: 
   type: 3
-  variants: []
+  variants:
+  - {fileID: 21300000, guid: c21df38066bf3434d8eed718ffa08538, type: 3}
+  - {fileID: 21300000, guid: 9c896490aba8306448c2ff1f465d5d55, type: 3}
+  - {fileID: 21300000, guid: 443c9394769406044bb720376d40ea1b, type: 3}

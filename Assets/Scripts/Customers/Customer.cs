@@ -61,6 +61,7 @@ public class Customer : MonoBehaviour
 	private void RandomizeOrder() {
 		foreach (CompType type in Enum.GetValues(typeof(CompType))) {
 			int variant = UnityEngine.Random.Range(0, ComponentManager.ComponentNumber(type));
+			Debug.Log($"Adding {type} {variant} to customer order");
 			order.Add(type, variant);
 		}
 		if(isFront) {
@@ -74,7 +75,9 @@ public class Customer : MonoBehaviour
 		itemHolder.SetActive(true);
 		foreach (ComponentImage cImg in itemImgs) {
 			if (order.ContainsKey(cImg.type)) {
-				cImg.SetSprite(ComponentManager.GetVariantSprite(cImg.type, order.GetValueOrDefault(cImg.type)));
+				Sprite s = ComponentManager.GetVariantSprite(cImg.type, order.GetValueOrDefault(cImg.type));
+				Debug.Log($"Setting {cImg.img.name} to {cImg.type} {order.GetValueOrDefault(cImg.type)}: {s.name}");
+				cImg.SetSprite(s);
 			}
 		}
 	}

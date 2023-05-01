@@ -220,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[0].clip
@@ -235,7 +235,23 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
+      propertyPath: audioArray.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cd9edacfa82e8884193c8504da368f89, type: 3}
+    - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
+      propertyPath: audioArray.Array.data[1].name
+      value: Ambiance
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
+      propertyPath: audioArray.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[0].volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
+      propertyPath: audioArray.Array.data[1].volume
       value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436915, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
@@ -1049,7 +1065,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1333027222
 MonoBehaviour:
@@ -1095,7 +1111,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1473876085}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.48699498
+  m_Size: 0.50595504
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1305,7 +1321,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1599,7 +1615,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1701,30 +1717,29 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Control both characters to fulfill each cat''s order and deliver it to
-    them!
+  m_text: 'Control both characters to fulfill and deliver each cat''s order!
 
 
     <b>Cook</b>
 
-    -WASD: movement
+    -WASD:
+    movement
 
     -Left Shift: interaction
 
-    -Pick
-    up the water gun and interact with fires to put them out, then put the water
-    gun back down to assemble more orders
+    -Pick up the water gun and interact
+    with fires to put them out, then put the water gun back down to assemble more
+    orders
 
 
     <b>Plater</b>
 
     -Arrows: movement
 
-    -Right
-    Shift: interaction
+    -Right Shift: interaction
 
-    -Lick up puddles three times to mop them up and stop
-    sliding around'
+    -Lick
+    up puddles three times to mop them up and stop sliding around'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2008,28 +2023,27 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<b>Programmers</b>
 
-    <smallcaps>Kylie Gilde
+    Kylie Gilde
 
-    <smallcaps>Srivathsan
-    Prakash</smallcaps>
+    Srivathsan Prakash
 
 
     <b>Art</b>
 
-    <smallcaps>Pattie Umali</smallcaps>
+    Pattie
+    Umali
 
 
     <b>Audio</b>
 
-    <smallcaps>Pattie
-    Umali</smallcaps>
+    Pattie Umali
 
 
     <b>Voice Talent</b>
 
-    <smallcaps>Suzu</smallcaps>
+    Suzu
 
-    <smallcaps>Peeks</smallcaps>
+    Peeks
 
 
     <b>Additonal
@@ -2040,39 +2054,36 @@ MonoBehaviour:
     <size=16>
 
     <i>Pixel
-    Art GUI Elements,</i> <smallcaps>Mounir Tohami</smallcaps>
+    Art GUI Elements,</i> Mounir Tohami
 
-    <i>[LPC] House
-    Insides,</i> <smallcaps>Lanea Zimmerman (Sharm)</smallcaps> and <smallcaps>HughSpectrum</smallcaps>
+    <i>[LPC] House Insides,</i> Lanea Zimmerman
+    (Sharm) and HughSpectrum
 
-    <i>Orange
-    Fat Cat,</i> <smallcaps>megupets.com</smallcaps>
+    <i>Orange Fat Cat,</i> megupets.com
 
-    <i>Cat Fighter Sprite Sheet</i>
-    and <i>Cat Fighter Addon2 [Assault Rifle Kit],</i> <smallcaps>dogchicken</smallcaps>
+    <i>Cat
+    Fighter Sprite Sheet</i> and <i>Cat Fighter Addon2 [Assault Rifle Kit],</i> dogchicken
 
     <i>[LPC]
-    Foods,</i> <smallcaps>bluecarrot16, Daniel Eddeland (daneeklu), Joshua Taylor,
-    Richard Kettering (Jetrel), thekingphoenix, RedVoxel,</smallcaps> and <smallcaps>Molly
-    "Cougarmint" Willits/<smallcaps>
+    Foods,</i> bluecarrot16, Daniel Eddeland (daneeklu), Joshua Taylor, Richard Kettering
+    (Jetrel), thekingphoenix, RedVoxel, and Molly "Cougarmint" Willits/
 
-    <i>Mega Pixel Art 32x32 px Icons Sprite
-    Sheet,</i> <smallcaps>PiiiXL</smallcaps>
+    <i>Mega
+    Pixel Art 32x32 px Icons Sprite Sheet,</i> PiiiXL
 
-    <i>[LPC] Flames,</i> <smallcaps>Sharm</smallcaps>
+    <i>[LPC] Flames,</i> Sharm
 
     <i>Cookie,</i>
-    <smallcaps>Fetknoppen</smallcaps>
+    Fetknoppen
 
     </size>
 
-    <size=18><b>Unity Asset
-    Store</b></size>
+    <size=18><b>Unity Asset Store</b></size>
 
     <size=16>
 
-    <i>Cat Character,</i> <smallcaps>Igra
-    Studios</smallcaps>
+    <i>Cat
+    Character,</i> Igra Studios
 
     </size>'
   m_isRightToLeft: 0

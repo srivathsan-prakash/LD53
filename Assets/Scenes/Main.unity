@@ -4428,7 +4428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[0].clip
@@ -4445,10 +4445,10 @@ PrefabInstance:
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[1].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 080b06d7224bb1b4d833459a037d8024, type: 3}
+      objectReference: {fileID: 8300000, guid: cd9edacfa82e8884193c8504da368f89, type: 3}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[1].name
-      value: Fast_BGM
+      value: Ambiance
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[1].type
@@ -4457,38 +4457,50 @@ PrefabInstance:
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[2].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 8605448a616e1694abd515bf9b8e6e8f, type: 3}
+      objectReference: {fileID: 8300000, guid: 080b06d7224bb1b4d833459a037d8024, type: 3}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[2].name
-      value: CustomerSpawn
+      value: Fast_BGM
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[2].type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[3].clip
       value: 
-      objectReference: {fileID: 8300000, guid: f5a1c2dd22f196749b8847bae9b7233e, type: 3}
+      objectReference: {fileID: 8300000, guid: 8605448a616e1694abd515bf9b8e6e8f, type: 3}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[3].name
-      value: OrderSuccess
+      value: CustomerSpawn
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[4].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 69521892f062b2e47ba2ed4f19007cb9, type: 3}
+      objectReference: {fileID: 8300000, guid: f5a1c2dd22f196749b8847bae9b7233e, type: 3}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[4].name
-      value: OrderFail
+      value: OrderSuccess
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[5].clip
       value: 
-      objectReference: {fileID: 8300000, guid: f53c88b90e332a440865e30ef8b92a6a, type: 3}
+      objectReference: {fileID: 8300000, guid: 69521892f062b2e47ba2ed4f19007cb9, type: 3}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[5].name
+      value: OrderFail
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
+      propertyPath: audioArray.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f53c88b90e332a440865e30ef8b92a6a, type: 3}
+    - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
+      propertyPath: audioArray.Array.data[6].name
       value: CustomerPatienceDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
+      propertyPath: audioArray.Array.data[6].type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[0].volume
@@ -4496,11 +4508,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[1].volume
-      value: 0.4
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[2].volume
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[3].volume
@@ -4512,6 +4524,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
       propertyPath: audioArray.Array.data[5].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514604007931436914, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
+      propertyPath: audioArray.Array.data[6].volume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2514604007931436915, guid: 663495209d3bc714394e2c14bc39d2eb, type: 3}
@@ -5402,6 +5418,18 @@ PrefabInstance:
       propertyPath: lines.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5537166025504591498, guid: 623870b9f10a3bc43bed176b4ed416c4, type: 3}
+      propertyPath: variants.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537166025504591498, guid: 623870b9f10a3bc43bed176b4ed416c4, type: 3}
+      propertyPath: variants.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7ed200576c08cb40b0f3f08f46d46fe, type: 3}
+    - target: {fileID: 5537166025504591498, guid: 623870b9f10a3bc43bed176b4ed416c4, type: 3}
+      propertyPath: variants.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5902d3e2f30605a418af1a786e83b828, type: 3}
     - target: {fileID: 5537166025504591498, guid: 623870b9f10a3bc43bed176b4ed416c4, type: 3}
       propertyPath: lines.Array.data[0].head
       value: 

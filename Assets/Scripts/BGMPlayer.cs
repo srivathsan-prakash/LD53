@@ -5,6 +5,7 @@ using UnityEngine;
 public class BGMPlayer : MonoBehaviour
 {
 	private void Start() {
-		Events.PlayMusic("BGM");
+		Events.PlayMusic?.Invoke("BGM");
+		Events.PlayMusic?.Invoke("Ambiance");
 	}
 }

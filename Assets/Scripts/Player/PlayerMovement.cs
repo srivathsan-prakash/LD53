@@ -11,19 +11,19 @@ public class PlayerMovement : MonoBehaviour
 
 	private bool isSlippery = false;
 
-	private void Update() {
+	private void Update()
+	{
 		// Get variables
 		Vector3 distance = (isSlippery ? slipperySpeed : speed) * Time.deltaTime * GetInputValues(true);
 		bool isAnimatorWalking = animator.GetBool("isWalking");
 		bool isPlayerWalking = distance != Vector3.zero;
-		
+
 		// Set Movement and Animation states
-		transform.position += distance;
 		sprite.flipX = distance.x < 0;
 
 		if (isAnimatorWalking != isPlayerWalking)
 			animator.SetBool("isWalking", isPlayerWalking);
-
+	}
 	private void FixedUpdate() {
 		rb.velocity = GetInputValues(true) * (isSlippery ? slipperySpeed : speed);
 	}

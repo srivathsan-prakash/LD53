@@ -140,6 +140,7 @@ MonoBehaviour:
   slipperySpeed: 6
   animator: {fileID: 9152713931736552382}
   sprite: {fileID: 2720449570526898921}
+  rb: {fileID: 672236312096178595}
 --- !u!50 &672236312096178595
 Rigidbody2D:
   serializedVersion: 4
@@ -173,6 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123783bcfe12e3e479c55b3bf36b32ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionKey: 0
   item: {fileID: 6750712760554241108}
 --- !u!95 &9152713931736552382
 Animator:

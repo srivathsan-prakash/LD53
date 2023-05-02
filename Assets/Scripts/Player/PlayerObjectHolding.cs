@@ -18,7 +18,9 @@ public class PlayerObjectHolding : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.CompareTag("Component")) {
-			component = collision.GetComponent<Comp>();
+			Comp c = collision.GetComponent<Comp>();
+			CompareAndOutline(component, c);
+			component = c;
 		} else if (collision.CompareTag("Dropoff")) {
 			dropoffItem = collision.GetComponentInChildren<Item>();
 		} else if (collision.CompareTag("Customer")) {
@@ -30,6 +32,8 @@ public class PlayerObjectHolding : MonoBehaviour
 		} else if (collision.CompareTag("Spill")) {
 			spill = collision.GetComponent<Spill>();
 		}
+
+		SetOutline(collision.gameObject, true);
 	}
 
 	private void OnTriggerExit2D(Collider2D collision) {
@@ -55,6 +59,22 @@ public class PlayerObjectHolding : MonoBehaviour
 				spill = null;
 			}
 		}
+
+		SetOutline(collision.gameObject, false);
+	}
+
+	private void SetOutline(GameObject obj, bool enable) {
+		SpriteOutliner outline = obj.GetComponent<SpriteOutliner>();
+		if (outline != null) {
+			outline.EnableOutline(enable);
+		}
+	}
+
+	private void CompareAndOutline<T>(T obj1, T obj2) where T: MonoBehaviour {
+		if(obj1 != null && obj2 != null && !obj1.Equals(obj2)) {
+			SetOutline(obj1.gameObject, false);
+			SetOutline(obj2.gameObject, true);
+		}
 	}
 	
 	private void Update() {
@@ -72,6 +92,7 @@ public class PlayerObjectHolding : MonoBehaviour
 				}
 				extinguisher.enabled = !extinguisher.enabled;
 				hasExtinguisher = !hasExtinguisher;
+				SetOutline(extinguisher.gameObject, extinguisher.enabled);
 				//Get/put down the gun here
 				anim.SetTrigger("Pickup");
 			} else if (fire != null && hasExtinguisher) {

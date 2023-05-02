@@ -6,7 +6,8 @@ public class PlayerObjectHolding : MonoBehaviour
 {
 	public KeyCode interactionKey;
 	public Item item;
-	[SerializeField] private Animator anim;
+	public GameObject plate;
+	public Animator anim;
 
 	private Comp component;
 	private Item dropoffItem;
@@ -15,6 +16,8 @@ public class PlayerObjectHolding : MonoBehaviour
 	private bool hasExtinguisher = false;
 	private GameObject fire;
 	private Spill spill;
+	private int regLayerIndex = 0;
+	private int gunLayerIndex = 1;
 
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.CompareTag("Component")) {
@@ -93,12 +96,14 @@ public class PlayerObjectHolding : MonoBehaviour
 				extinguisher.enabled = !extinguisher.enabled;
 				hasExtinguisher = !hasExtinguisher;
 				SetOutline(extinguisher.gameObject, extinguisher.enabled);
-				//Get/put down the gun here
+				ToggleGun(hasExtinguisher);
 				anim.SetTrigger("Pickup");
-			} else if (fire != null && hasExtinguisher) {
-				Events.FireExtinguished?.Invoke();
-				Destroy(fire);
-				//Use the gun here
+			} else if (hasExtinguisher) {
+				anim.SetTrigger("Fire");
+				if (fire != null) {
+					Events.FireExtinguished?.Invoke();
+					Destroy(fire);
+                }
 			} else if (customer != null) {
 				if (!item.IsEmpty()) {
 					customer.GiveItem(item.Components);
@@ -116,6 +121,22 @@ public class PlayerObjectHolding : MonoBehaviour
 					anim.SetTrigger("Pickup");
 				}
 			}
+		}
+	}
+
+	private void ToggleGun(bool isOn)
+	{
+		if (isOn)
+		{
+			anim.SetLayerWeight(regLayerIndex, 0);
+			anim.SetLayerWeight(gunLayerIndex, 1);
+			plate.gameObject.SetActive(false);
+		}
+		else
+		{
+			anim.SetLayerWeight(gunLayerIndex, 0);
+			anim.SetLayerWeight(regLayerIndex, 1);
+			plate.gameObject.SetActive(true);
 		}
 	}
 }

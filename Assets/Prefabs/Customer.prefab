@@ -5538,8 +5538,8 @@ MonoBehaviour:
   angryThreshold: 0.33
   angryColor: {r: 1, g: 0, b: 0, a: 1}
   maxPatience: 100
-  patienceDecayFront: 8
-  patienceDecayBehind: 2
+  patienceDecayFront: 6
+  patienceDecayBehind: 1
   rend: {fileID: 2563459855243784763}
   successParticles: {fileID: 1125143355991963407}
   failParticles: {fileID: 7510905045384412737}

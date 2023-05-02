@@ -107,6 +107,16 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: dc6a5294f5d349a499804e0d336b46a1, type: 3}
     volume: 0.7
     source: {fileID: 0}
+  - name: Fire
+    type: 0
+    clip: {fileID: 8300000, guid: 259299f4dc0a8d64a99fbbe2c047217a, type: 3}
+    volume: 0.7
+    source: {fileID: 0}
+  - name: Spill
+    type: 0
+    clip: {fileID: 8300000, guid: 050f396d6ad17a943adf71f0270a027d, type: 3}
+    volume: 0.7
+    source: {fileID: 0}
 --- !u!1 &2514604008145624688
 GameObject:
   m_ObjectHideFlags: 0

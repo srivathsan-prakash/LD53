@@ -39,7 +39,7 @@ public class Item : MonoBehaviour
 
     public void UpdateComponent(CompType compType, int variant) {
         Components[compType] = variant;
-
+		Events.PlaySound("Pickup");
         DisplayComponents();
     }
 

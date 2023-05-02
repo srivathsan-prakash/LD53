@@ -9,8 +9,10 @@ public class TimerManager : MonoBehaviour
 	public GameObject endGamePopup;
 	public TextMeshProUGUI endScoreText;
 	public int maxSeconds = 300;
+	public int fastMusicThreshold = 60;
 
 	private float currentSeconds = 0;
+	private bool playingFastMusic = false;
 
 	private void Start() {
 		currentSeconds = maxSeconds;
@@ -22,6 +24,12 @@ public class TimerManager : MonoBehaviour
 			currentSeconds -= Time.deltaTime;
 			currentSeconds = Mathf.Max(currentSeconds, 0);
 			timerText.text = TimeText(currentSeconds);
+
+			if(!playingFastMusic && currentSeconds <= fastMusicThreshold) {
+				Events.StopMusic?.Invoke();
+				Events.PlayMusic?.Invoke("Fast_BGM");
+				playingFastMusic = true;
+			}
 
 			if(currentSeconds <= 0) {
 				EndGame();

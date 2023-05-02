@@ -17,19 +17,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2412140716773931863, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_Size.x
-      value: 1.1003444
+      value: 0.7348026
       objectReference: {fileID: 0}
     - target: {fileID: 2412140716773931863, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_Size.y
-      value: 1.8105006
+      value: 1.1033871
       objectReference: {fileID: 0}
     - target: {fileID: 2412140716773931863, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_Offset.x
-      value: 0.062230483
+      value: -0.018668115
       objectReference: {fileID: 0}
     - target: {fileID: 2412140716773931863, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_Offset.y
-      value: -0.0695513
+      value: -0.051573873
       objectReference: {fileID: 0}
     - target: {fileID: 2720449570526898920, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: m_RootOrder
@@ -103,6 +103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightPlayer Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2758354694280655600, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 2333554535425282522}
     - target: {fileID: 2758354694280655600, guid: 504bcbeeabce7be42be0dc69d56a405f, type: 3}
       propertyPath: interactionKey
       value: 303

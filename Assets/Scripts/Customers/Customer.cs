@@ -54,6 +54,8 @@ public class Customer : MonoBehaviour
 	private float currentPatienceDecay;
 	private bool isFront = false;
 	private bool doDecay = true;
+	private bool soundFlag = false;
+	private bool soundFlag2 = false;
 
 	private void Start() {
 		RandomizeOrder();
@@ -61,6 +63,7 @@ public class Customer : MonoBehaviour
 		currentPatience = maxPatience;
 		UpdateSliderVisual();
 		currentPatienceDecay = patienceDecayBehind;
+		Events.PlaySound?.Invoke("CustomerSpawn");
 	}
 
 	public void SetSprite(Sprite s) {
@@ -95,9 +98,17 @@ public class Customer : MonoBehaviour
 			moodIndicator.sprite = happyImg;
 			sliderFill.color = happyColor;
 		} else if (currentPatience > maxPatience * angryThreshold) {
+			if(!soundFlag) {
+				soundFlag = true;
+				Events.PlaySound?.Invoke("CustomerPatienceDown");
+			}
 			moodIndicator.sprite = mehImg;
 			sliderFill.color = mehColor;
 		} else {
+			if(!soundFlag2) {
+				soundFlag2 = true;
+				Events.PlaySound?.Invoke("CustomerPatienceDown");
+			}
 			moodIndicator.sprite = angryImg;
 			sliderFill.color = angryColor;
 		}
@@ -138,7 +149,7 @@ public class Customer : MonoBehaviour
 		patienceSlider.gameObject.SetActive(false);
 		moodIndicator.gameObject.SetActive(false);
 		rend.enabled = false;
-
+		Events.PlaySound?.Invoke(success ? "OrderSuccess" : "OrderFail");
 		(success ? successParticles : failParticles).Play();
 		float seconds = (success ? successParticles : failParticles).main.duration;
 		yield return new WaitForSeconds(seconds / 2.0f);

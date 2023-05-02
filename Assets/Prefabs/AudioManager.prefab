@@ -46,7 +46,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSourceContainer: {fileID: 2514604008145624688}
-  audioArray: []
+  audioArray:
+  - name: BGM
+    type: 1
+    clip: {fileID: 8300000, guid: 9cd93a3cacfd31f418712278f469228c, type: 3}
+    volume: 0.4
+    source: {fileID: 0}
+  - name: Ambiance
+    type: 1
+    clip: {fileID: 8300000, guid: cd9edacfa82e8884193c8504da368f89, type: 3}
+    volume: 0.2
+    source: {fileID: 0}
+  - name: Fast_BGM
+    type: 1
+    clip: {fileID: 8300000, guid: 080b06d7224bb1b4d833459a037d8024, type: 3}
+    volume: 0.4
+    source: {fileID: 0}
+  - name: CustomerSpawn
+    type: 0
+    clip: {fileID: 8300000, guid: 8605448a616e1694abd515bf9b8e6e8f, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: OrderSuccess
+    type: 0
+    clip: {fileID: 8300000, guid: f5a1c2dd22f196749b8847bae9b7233e, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: OrderFail
+    type: 0
+    clip: {fileID: 8300000, guid: 69521892f062b2e47ba2ed4f19007cb9, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: CustomerPatienceDown
+    type: 0
+    clip: {fileID: 8300000, guid: f53c88b90e332a440865e30ef8b92a6a, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Pickup
+    type: 0
+    clip: {fileID: 8300000, guid: cba652a9b79178749afff87f6571f6a4, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: PutDown
+    type: 0
+    clip: {fileID: 8300000, guid: dde07a758597464438feaaa27ada4bbc, type: 3}
+    volume: 0.7
+    source: {fileID: 0}
+  - name: ToggleGun
+    type: 0
+    clip: {fileID: 8300000, guid: 7279d617cc9851d41a8eb1a3c3414b92, type: 3}
+    volume: 0.7
+    source: {fileID: 0}
+  - name: FireGun
+    type: 0
+    clip: {fileID: 8300000, guid: e65ca7190fd7a494c875ab58db4dc7c2, type: 3}
+    volume: 0.7
+    source: {fileID: 0}
+  - name: Lick
+    type: 0
+    clip: {fileID: 8300000, guid: dc6a5294f5d349a499804e0d336b46a1, type: 3}
+    volume: 0.7
+    source: {fileID: 0}
 --- !u!1 &2514604008145624688
 GameObject:
   m_ObjectHideFlags: 0

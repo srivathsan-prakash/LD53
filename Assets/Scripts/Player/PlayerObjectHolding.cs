@@ -66,6 +66,7 @@ public class PlayerObjectHolding : MonoBehaviour
 				item.Clear();
 				spill.IncrementLicks();
 				anim.SetTrigger("Lick");
+				Events.PlaySound?.Invoke("Lick");
 			} else if (component != null && !hasExtinguisher) {
 				item.UpdateComponent(component.type, component.variant);
 				anim.SetTrigger("Pickup");
@@ -79,6 +80,7 @@ public class PlayerObjectHolding : MonoBehaviour
 				anim.SetTrigger("Pickup");
 			} else if (hasExtinguisher) {
 				anim.SetTrigger("Fire");
+				Events.PlaySound?.Invoke("FireGun");
 				if (fire != null) {
 					Events.FireExtinguished?.Invoke();
 					Destroy(fire);
@@ -94,10 +96,13 @@ public class PlayerObjectHolding : MonoBehaviour
 					item.SetValues(dropoffItem.Components);
 					dropoffItem.Clear();
 					anim.SetTrigger("Pickup");
-				} else if (!item.IsEmpty() && dropoffItem.IsEmpty()) {
+					Events.PlaySound?.Invoke("PutDown");
+				}
+				else if (!item.IsEmpty() && dropoffItem.IsEmpty()) {
 					dropoffItem.SetValues(item.Components);
 					item.Clear();
 					anim.SetTrigger("Pickup");
+					Events.PlaySound?.Invoke("PutDown");
 				}
 			}
 		}
@@ -117,5 +122,6 @@ public class PlayerObjectHolding : MonoBehaviour
 			anim.SetLayerWeight(regLayerIndex, 1);
 			plate.gameObject.SetActive(true);
 		}
+		Events.PlaySound?.Invoke("ToggleGun");
 	}
 }

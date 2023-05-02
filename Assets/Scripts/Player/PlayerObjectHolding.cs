@@ -36,48 +36,105 @@ public class PlayerObjectHolding : MonoBehaviour
 			spill = collision.GetComponent<Spill>();
 		}
 
-		SetOutline(collision.gameObject, true);
+		SetOutlines();
 	}
 
 	private void OnTriggerExit2D(Collider2D collision) {
 		if(collision.CompareTag("Component")) {
 			Comp c = collision.GetComponent<Comp>();
 			if (component != null && component.Equals(c)) {
+				SetOutline(component, false);
 				component = null;
 			}
 		} else if (collision.CompareTag("Dropoff")) {
+			SetOutline(dropoffItem.transform.parent.gameObject, false);
 			dropoffItem = null;
 		} else if (collision.CompareTag("Customer")) {
+			SetOutline(customer, false);
 			customer = null;
 		} else if (collision.CompareTag("FireExtinguisher")) {
+			SetOutline(extinguisher, false);
 			extinguisher = null;
 		} else if (collision.CompareTag("Fire")) {
 			GameObject f = collision.gameObject;
 			if(fire != null && fire.Equals(f)) {
+				SetOutline(fire, false);
 				fire = null;
 			}
 		} else if (collision.CompareTag("Spill")) {
 			Spill s = collision.GetComponent<Spill>();
 			if(spill != null && spill.Equals(s)) {
+				SetOutline(spill, false);
 				spill = null;
 			}
 		}
 
-		SetOutline(collision.gameObject, false);
+		SetOutlines();
 	}
 
 	private void SetOutline(GameObject obj, bool enable) {
-		SpriteOutliner outline = obj.GetComponent<SpriteOutliner>();
-		if (outline != null) {
-			outline.EnableOutline(enable);
+		if(obj != null) {
+			SpriteOutliner outline = obj.GetComponent<SpriteOutliner>();
+			if (outline != null) {
+				outline.EnableOutline(enable);
+			}
+		}
+	}
+
+	private void SetOutline(SpriteRenderer obj, bool enable) {
+		if (obj != null) {
+			SpriteOutliner outline = obj.GetComponent<SpriteOutliner>();
+			if (outline != null) {
+				outline.EnableOutline(enable);
+			}
+		}
+	}
+
+	private void SetOutline<T>(T obj, bool enable) where T: MonoBehaviour {
+		if(obj != null) {
+			SpriteOutliner outline = obj.GetComponent<SpriteOutliner>();
+			if (outline != null) {
+				outline.EnableOutline(enable);
+			}
 		}
 	}
 
 	private void CompareAndOutline<T>(T obj1, T obj2) where T: MonoBehaviour {
 		if(obj1 != null && obj2 != null && !obj1.Equals(obj2)) {
-			SetOutline(obj1.gameObject, false);
-			SetOutline(obj2.gameObject, true);
+			SetOutline(obj1, false);
+			SetOutline(obj2, true);
 		}
+	}
+
+	private void SetOutlines() {
+		if(spill != null) {
+			DisableAllOutlines();
+			SetOutline(spill, true);
+		} else if (component != null && !hasExtinguisher) {
+			DisableAllOutlines();
+			SetOutline(component, true);
+		} else if (extinguisher != null) {
+			DisableAllOutlines();
+			SetOutline(extinguisher, true);
+		} else if (hasExtinguisher && fire != null) {
+			DisableAllOutlines();
+			SetOutline(fire, true);
+		} else if (customer != null) {
+			DisableAllOutlines();
+			SetOutline(customer, true);
+		} else if (dropoffItem != null) {
+			DisableAllOutlines();
+			SetOutline(dropoffItem.transform.parent.gameObject, true);
+		}
+	}
+
+	private void DisableAllOutlines() {
+		SetOutline(spill, false);
+		SetOutline(component, false);
+		SetOutline(extinguisher, false);
+		SetOutline(fire, false);
+		SetOutline(customer, false);
+		SetOutline(dropoffItem.transform.parent.gameObject, false);
 	}
 	
 	private void Update() {
@@ -89,7 +146,7 @@ public class PlayerObjectHolding : MonoBehaviour
 			} else if (component != null && !hasExtinguisher) {
 				item.UpdateComponent(component.type, component.variant);
 				anim.SetTrigger("Pickup");
-			}  else if (extinguisher != null) {
+			} else if (extinguisher != null) {
 				if(!hasExtinguisher) {
 					item.Clear();
 				}
